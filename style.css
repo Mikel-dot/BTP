@@ -1,0 +1,344 @@
+:root {
+    --bg-dark: #010a13;
+    --bg-card: #0a1428;
+    --turquesa: #00f2ff; /* Turquesa Eléctrico */
+    --turquesa-glow: rgba(0, 242, 255, 0.5);
+    --text-main: #f0f5f5;
+    --text-dim: #a09b8c;
+    --negative: #ff4655;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVEGACIÓN PREMIUM (GLASSMORPHISM) --- */
+.glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    /* Efecto cristal oscuro */
+    background: rgba(1, 10, 19, 0.75); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* Borde inferior sutil y sombra para separarlo del fondo */
+    border-bottom: 1px solid rgba(0, 242, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* El logo de la izquierda */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.nav-brand:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--turquesa);
+    box-shadow: 0 0 10px var(--turquesa-glow);
+    object-fit: cover;
+}
+
+.nav-brand span {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Los enlaces de la derecha */
+.nav-links {
+    display: flex;
+    gap: 10px; /* Separación entre botones */
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent; /* Prepara el borde para el hover */
+}
+
+/* Efecto al pasar el ratón */
+.nav-links a:hover {
+    color: #ffffff;
+    background: rgba(0, 242, 255, 0.08);
+    border-color: rgba(0, 242, 255, 0.3);
+    text-shadow: 0 0 8px var(--turquesa-glow);
+}
+
+/* La página en la que estás actualmente */
+.nav-links a.active {
+    color: var(--bg-dark);
+    background: var(--turquesa);
+    border-color: var(--turquesa);
+    box-shadow: 0 0 15px var(--turquesa-glow);
+    text-shadow: none; /* Quitamos la sombra del texto para que lea bien sobre el fondo claro */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 10% 80px;
+    background: radial-gradient(circle at center, #003035 0%, var(--bg-dark) 70%);
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: var(--turquesa);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 30px var(--turquesa-glow);
+    margin-bottom: 20px;
+}
+
+/* --- EL LOGO CENTRAL BRILLANTE --- */
+.hero-logo {
+    width: 140px; /* Tamaño del logo */
+    height: 140px;
+    border-radius: 50%; /* Lo hace redondo */
+    border: 2px solid var(--turquesa);
+    background: var(--bg-card); /* Por si el PNG tiene fondo transparente */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px auto; /* Centrado y con margen abajo */
+    
+    /* El mismo efecto de luz hacia atrás */
+    box-shadow: 
+        0 0 20px var(--turquesa-glow),          
+        0 0 60px rgba(0, 242, 255, 0.2),       
+        inset 0 0 15px rgba(0, 242, 255, 0.1); 
+    transition: 0.5s ease;
+}
+
+/* Efecto al pasar el ratón */
+.hero-logo:hover {
+    box-shadow: 
+        0 0 30px var(--turquesa),
+        0 0 80px rgba(0, 242, 255, 0.4);
+    transform: scale(1.05); /* Se hace un pelín más grande */
+}
+
+/* --- LA ESTRELLA: Captura con Brillo Trasero --- */
+.glowing-screenshot-container {
+    position: relative;
+    margin: 60px auto;
+    max-width: 1000px;
+    padding: 10px; /* Espacio para el brillo */
+}
+
+.glowing-screenshot-container img {
+    width: 100%;
+    display: block;
+    border: 2px solid var(--turquesa);
+    border-radius: 4px;
+    /* El efecto de luz hacia atrás (box-shadow) */
+    box-shadow: 
+        0 0 20px var(--turquesa-glow),          /* Brillo medio */
+        0 0 60px rgba(0, 242, 255, 0.2),       /* Brillo suave exterior */
+        inset 0 0 15px rgba(0, 242, 255, 0.1); /* Brillo interno sutil */
+    transition: 0.5s;
+}
+
+/* Efecto hover opcional para que la luz "baile" */
+.glowing-screenshot-container img:hover {
+    box-shadow: 
+        0 0 30px var(--turquesa),
+        0 0 80px rgba(0, 242, 255, 0.3);
+}
+
+/* Bloques de Filosofía/Texto */
+.philosophy-section {
+    padding: 60px 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--bg-card);
+    border-top: 1px solid rgba(0, 242, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.philosophy-card {
+    padding: 20px;
+}
+
+.philosophy-card h3 {
+    color: var(--turquesa);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.philosophy-card p {
+    color: var(--text-dim);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Botones */
+.btn-main {
+    display: inline-block;
+    padding: 18px 45px;
+    border: 2px solid var(--turquesa);
+    color: var(--turquesa);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-main:hover {
+    background: var(--turquesa);
+    color: var(--bg-dark);
+    box-shadow: 0 0 30px var(--turquesa-glow);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+/* --- SECCIÓN DE FUNCIONALIDADES (ZIG-ZAG) --- */
+.features-showcase {
+    padding: 80px 10%;
+    background: var(--bg-dark);
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+/* Invierte el orden para el efecto Zig-Zag */
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 2.5rem;
+    color: var(--turquesa);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px var(--turquesa-glow);
+}
+
+.feature-text p {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.feature-text .beta-note {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    border-left: 2px solid var(--turquesa);
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.feature-image {
+    flex: 1;
+    margin: 0; /* Reseteamos el margin auto para que encaje bien en la columna */
+}
+
+/* Para que en móviles se vea bien y no se aplaste */
+@media (max-width: 900px) {
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .feature-text .beta-note {
+        border-left: none;
+        border-top: 2px solid var(--turquesa);
+        padding-top: 15px;
+        padding-left: 0;
+    }
+}
+/* Variante para imágenes verticales (Modales, Configuración, etc.) */
+.glowing-screenshot-container.vertical {
+    max-width: 350px; /* Evita que la imagen vertical se haga gigante */
+    margin: 0 auto;
+}
+
+/* --- SELECTOR DE IDIOMA --- */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+    border-left: 1px solid rgba(0, 242, 255, 0.2);
+    padding-left: 20px;
+}
+
+.lang-toggle a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lang-toggle a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--turquesa-glow);
+}
+
+.lang-toggle a.lang-active {
+    color: var(--turquesa);
+}
+
+.lang-toggle img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.lang-toggle a.lang-active img, .lang-toggle a:hover img {
+    opacity: 1;
+    box-shadow: 0 0 10px var(--turquesa-glow);
+}
