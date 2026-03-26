@@ -338,6 +338,57 @@ footer {
     transition: 0.3s;
 }
 
+/* --- ADAPTACIÓN PARA MÓVILES (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Arreglar la barra de navegación (Nav) */
+    .glass-nav {
+        flex-direction: column; /* Apila el logo arriba y los links abajo */
+        padding: 15px 5%;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap; /* Permite que los botones salten a la siguiente línea si no caben */
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        padding: 6px 10px; /* Botones un poco más pequeños */
+        font-size: 0.75rem;
+    }
+
+    /* El selector de idioma en móvil */
+    .lang-toggle {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    /* 2. Arreglar las cartas de Filosofía */
+    .philosophy-section {
+        display: flex;
+        flex-direction: column; /* Pone una carta debajo de la otra */
+        padding: 40px 5%;
+        gap: 20px;
+    }
+
+    .philosophy-card {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    /* 3. Ajuste extra: Reducir el título gigante para que no se salga de la pantalla */
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+}
+
 .lang-toggle a.lang-active img, .lang-toggle a:hover img {
     opacity: 1;
     box-shadow: 0 0 10px var(--turquesa-glow);
