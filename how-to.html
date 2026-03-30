@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Guía de Uso y Configuración | BTP LoL Tracker</title>
-    <meta name="description" content="Aprende a configurar tu API Key y a utilizar el asistente de Draft y el tracker post-partida de BTP para maximizar tu rendimiento en League of Legends.">
-    <meta name="keywords" content="Cómo usar BTP, Configurar Riot API, Tutorial LoL Tracker, Champion Pool BTP, Self-Coaching LoL">
+    <title>Usage & Configuration Guide | BTP LoL Tracker</title>
+    <meta name="description" content="Learn how to configure your API Key and use the BTP Draft assistant and post-match tracker to maximize your League of Legends performance.">
+    <meta name="keywords" content="How to use BTP, Riot API Setup, LoL Tracker Tutorial, BTP Champion Pool, LoL Self-Coaching">
     <meta name="robots" content="index, follow">
 
     <link rel="icon" href="assets/icono.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/icono.ico" type="image/x-icon">
 
-    <meta property="og:title" content="Guía de Uso de BTP">
-    <meta property="og:description" content="Configura tu API Key y domina el flujo de BTP en 3 sencillos pasos.">
+    <meta property="og:title" content="BTP Usage Guide">
+    <meta property="og:description" content="Configure your API Key and master the BTP workflow in 3 simple steps.">
     <meta property="og:image" content="assets/screenshot_home_btp.png">
     
     <link rel="stylesheet" href="style.css">
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
+    
     <nav class="glass-nav">
         <a href="index.html" class="nav-brand">
             <img src="assets/icono.png" alt="BTP Logo" class="nav-logo-img">
@@ -29,66 +40,190 @@
             <a href="about.html">Privacy</a>
             <a href="how-to.html" class="active">Guide</a>
             <a href="download.html">Download</a>
-            <a href="next.html">Roadmap</a>
+            <a href="next.html">Future</a>
             
             <div class="lang-toggle">
-                <a href="index-es.html" title="Español"><img src="https://flagcdn.com/es.svg" alt="ES"></a>
-                <a href="index.html" class="lang-active" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN"></a>
+                <a href="how-to-es.html" title="Español">
+                    <img src="https://flagcdn.com/es.svg" alt="ES">
+                </a>
+                <a href="how-to.html" class="lang-active" title="English">
+                    <img src="https://flagcdn.com/gb.svg" alt="EN">
+                </a>
             </div>
         </div>
     </nav>
 
     <header class="hero" style="padding: 80px 10% 40px;">
         <h1 class="hero-title" style="font-size: 3.5rem;">HOW TO USE BTP</h1>
-        <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px;">
-            From zero to expert in three steps. Configure it once and let it work in the background while you focus on winning.
+        <p style="font-size: 1.3rem; color: var(--text-main); max-width: 800px; margin: 0 auto 30px; font-weight: 300;">
+            From zero to expert in three steps. BTP is designed to be intuitive and silent. Set it up once and let it work in the background while you focus on winning.
         </p>
+
         <div class="glowing-screenshot-container" style="margin-top: 40px;">
             <img src="assets/home.jpg" alt="BTP Main Menu">
         </div>
+        <p style="color: var(--text-dim); margin-top: 20px;">
+            <em>The Command Center: From here you can launch the Draft Assistant, configure your Champion Pool, or review your Self-Coaching history.</em>
+        </p>
     </header>
 
     <section class="features-showcase" style="padding-top: 40px;">
+        
         <div class="feature-row">
             <div class="feature-text">
                 <h2 style="font-size: 2rem;">Step 1: Configure your API Key</h2>
-                <p>Go to <strong>Settings</strong> or enter the <strong>Self-Coaching</strong> tab and click on <strong>"Riot API"</strong>.</p>
-                <p>Input your Riot ID, Region, and the <span style="color: var(--turquesa);">Development API Key</span> generated in the Riot Developer portal.</p>
-                <p class="beta-note">You only have to do this once. Your key will be locally encrypted for future sessions.</p>
+                <p>In order for the Self-Coaching module to download your actual stats after every match, we need to connect to Riot Games.</p>
+                <p>Go to <strong>Settings</strong> (the gear icon top right) or enter the <strong>Self-Coaching</strong> tab and click on <strong>"Riot API"</strong>.</p>
+                <p>Enter your Riot ID (e.g., Faker#KR1), your region, and the <span style="color: var(--accent);">Development API Key</span> which you can generate for free on the Riot Developer Portal. Click Save and you're done!</p>
+                <p class="beta-note">You will only need to do this once. Your key will be encrypted locally for future sessions.</p>
             </div>
             <div class="glowing-screenshot-container vertical feature-image">
-                <img src="assets/api.jpg" alt="API Config">
+                <img src="assets/api.jpg" alt="API Key Configuration in BTP">
             </div>
         </div>
+
         <div class="feature-row reverse">
             <div class="feature-text">
                 <h2 style="font-size: 2rem;">Step 2: Define your Arsenal</h2>
                 <p>Click on <strong>Pool Builder</strong> from the main menu.</p>
-                <p>Search for your comfort champions and add them to your list. BTP will use this information to prioritize picks during the draft phase.</p>
+                <p>Here you will see tabs for each role (TOP, JGL, MID, ADC, SUP). Use the search bar to find your comfort champions and add them to your list. BTP will use this information to prioritize picks for you during the draft.</p>
+                <p style="color: var(--accent); font-weight: bold; margin-top: 15px;">Pro Tip: Remember to click "Save Changes" before switching roles or closing the window.</p>
             </div>
             <div class="glowing-screenshot-container feature-image">
-                <img src="assets/pool.jpg" alt="Pool Builder">
+                <img src="assets/pool.jpg" alt="Adding champions to the pool">
             </div>
         </div>
+
         <div class="feature-row">
             <div class="feature-text">
                 <h2 style="font-size: 2rem;">Step 3: Play and Evaluate</h2>
-                <p>Minimize BTP and enter a game. The draft assistant will open automatically upon finding a match.</p>
-                <p>When the Nexus explodes, BTP will launch a <strong>Mini-Popup</strong>. Take 10 seconds to grade your performance, and BTP will sync it with official stats.</p>
+                <p>Everything is set up! Minimize BTP and queue up for a game. If you have the option enabled in settings, <strong>the Draft Assistant will open automatically</strong> when a match is found.</p>
+                <p>When the Nexus explodes, BTP will detect the end of the game and launch a <strong>Mini-Popup</strong> on your screen. Take 10 seconds to rate your gameplay feel, vision, and farming. BTP will cross-reference your notes with the official stats and save them to your Self-Coaching history.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 100px auto 30px; max-width: 800px; padding-top: 40px; border-top: 1px solid rgba(var(--accent-rgb), 0.15);">
+            <h2 style="font-size: 2.5rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px var(--accent-glow); margin-bottom: 20px;">Advanced Statistical Analysis</h2>
+            <p style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 15px;">To provide highly accurate recommendations during the Draft phase, BTP does not rely on raw win rates. We utilize a <strong>system of Deltas</strong> that isolates the true structural advantage of every matchup and shatters win rate myths.</p>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); background: rgba(var(--accent-rgb), 0.05); padding: 15px; border-radius: 8px; border: 1px dashed rgba(var(--accent-rgb), 0.3);">
+                <em><strong>Note:</strong> Below we will detail the mathematical calculation step-by-step using <strong>Counters</strong> (enemies) as an example. The calculation for <strong>Synergies</strong> (allies) is completely analogous, adding their strengths instead of subtracting them ($E[WR] = WR_A + WR_B - 0.5$).</em>
+            </p>
+        </div>
+
+        <div style="background: rgba(var(--accent-rgb), 0.05); border-left: 4px solid var(--accent); padding: 25px; margin: 0 auto 60px; max-width: 800px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">In summary:</h3>
+            <p style="margin-bottom: 12px; font-size: 1.05rem;">
+                <strong style="color: var(--text-primary);">$\Delta_1$ (Raw Delta):</strong> Reflects the direct <strong>personal impact</strong>. Do you win or lose more than usual against this champion?
+            </p>
+            <p style="margin-bottom: 12px; font-size: 1.05rem;">
+                <strong style="color: var(--text-primary);">$\Delta_2$ (Normalized Delta):</strong> Reflects the <strong>true advantage of the ability kit</strong>. It isolates the meta to tell you if your champion is an authentic counter, ignoring whether the enemy is "broken" or nerfed.
+            </p>
+            <p style="margin-bottom: 0; font-size: 1.05rem;">
+                <strong style="color: var(--text-secondary);">$\Delta_3$ (Classified):</strong> Reflects... <em>[To be revealed. Coming soon]</em>.
+            </p>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem;">1. Raw Delta ($\Delta_1$)</h2>
+                <p>Delta 1 represents Personal Impact. It answers the question: <em>How does this matchup alter my standard probability of winning?</em></p>
+                <p><strong>The Delta 1 Trap:</strong> If you look at the example on the right, you will see that Darius loses a 3% win rate when playing against Teemo. Traditional websites will tell you: *"Teemo is a counter to Darius!"*.</p>
+                <p>But is this true? Does he counter him because Teemo's mechanics shut down Darius, or is Teemo simply statistically overpowered in this patch, beating everyone equally? Delta 1 is blind to this and can mislead us into banning the wrong champion.</p>
+            </div>
+            
+            <div class="feature-image" style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid rgba(var(--accent-rgb), 0.2); box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.05);">
+                <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase;">The Formula</h3>
+                <ul style="color: var(--text-secondary); margin-left: 20px; margin-bottom: 20px; font-size: 0.95rem;">
+                    <li style="margin-bottom: 8px;"><strong>$WR_{real}$:</strong> The historical win rate of your champion <em>specifically</em> when facing this enemy.</li>
+                    <li><strong>$WR_{A}$:</strong> The global average win rate of your champion against the rest of the world.</li>
+                </ul>
+                <div style="font-size: 1.3rem; text-align: center; margin: 20px 0; color: var(--text-primary);">
+                    $$ \Delta_1 = (WR_{real} - WR_{A}) \times 100 $$
+                </div>
+                <div class="example-box" style="margin: 0; padding: 15px; font-size: 0.9rem; border-color: var(--accent);">
+                    <strong style="color: var(--accent);">The Mirage of a Counter:</strong><br><br>
+                    You play <strong>Darius</strong> (Standard win rate $WR_{A} = 51\%$).<br>
+                    The data shows that against <strong>Teemo</strong>, Darius only wins $48\%$ of the time ($WR_{real}$).<br><br>
+                    $\Delta_1 = (0.48 - 0.51) \times 100 = \textbf{-3.00\%}$<br><br>
+                    <strong>Apparent Conclusion:</strong> Playing against Teemo penalizes you by 3%. It would seem like the ultimate counter, but the formula is ignoring Teemo's global state.
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem;">2. Normalized Delta ($\Delta_2$)</h2>
+                <p>Here is where BTP's magic comes in. To know if Teemo is a *true counter* to Darius, we first calculate the <strong>Expected Win Rate ($E[WR]$)</strong>. That is, we cross-reference the general form of both champions to find out what the math dictates "should" happen.</p>
+                <p>By subtracting the Expected Win Rate from the Real Win Rate, we obtain the <strong>True Advantage ($\Delta_2$)</strong>, completely filtering out whether the enemy is overpowered or nerfed.</p>
+                <p>As you will see in the example on the right, a negative $\Delta_1$ can turn into an incredibly positive $\Delta_2$. This means your champion's kit naturally shuts down the enemy, even if they are "broken". <strong>This is the master metric that ranks the Tier List in your Draft.</strong></p>
             </div>
 
+            <div class="feature-image" style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid rgba(var(--accent-rgb), 0.2); box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.05);">
+                <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase;">Uncovering the Truth</h3>
+                
+                <ul style="color: var(--text-secondary); margin-left: 20px; margin-bottom: 15px; font-size: 0.95rem;">
+                    <li style="margin-bottom: 8px;"><strong>$WR_{A}$:</strong> Your champion's global win rate.</li>
+                    <li style="margin-bottom: 8px;"><strong>$WR_{B}$:</strong> The enemy's global win rate on this patch.</li>
+                    <li><strong>$E[WR]$:</strong> The Expected Win Rate (the mathematical prediction).</li>
+                </ul>
+
+                <div style="font-size: 1.1rem; text-align: center; margin: 10px 0; color: var(--text-primary);">
+                    $$ E[WR] = WR_{A} - WR_{B} + 0.5 $$
+                </div>
+                <div style="font-size: 1.3rem; text-align: center; margin: 15px 0; color: var(--accent);">
+                    $$ \Delta_2 = (WR_{real} - E[WR]) \times 100 $$
+                </div>
+                
+                <div class="example-box" style="margin: 0; padding: 15px; font-size: 0.9rem; border-color: var(--accent);">
+                    <strong style="color: var(--accent);">The Resolution of the Teemo Case:</strong><br><br>
+                    We discover that in this patch <strong>Teemo is incredibly overpowered</strong> ($WR_{B} = 58\%$).<br>
+                    Mathematically, your <strong>Darius</strong> ($WR_{A} = 51\%$) "should" win only $43\%$ of the matches against such a statistical anomaly ($E[WR] = 0.51 - 0.58 + 0.5 = 0.43$). <br><br>
+                    However, the data from the previous card told us that Darius actually wins $48\%$ ($WR_{real}$).<br><br>
+                    $\Delta_2 = (0.48 - 0.43) \times 100 = \textbf{+5.00\%}$<br><br>
+                    <strong>The Reality:</strong> Although Delta 1 was -3.00%, Delta 2 reveals a +5.00%. Teemo does not counter Darius; Teemo beats everyone, but Darius is <strong>one of the best answers in the game</strong> to stop him.
+                </div>
+            </div>
         </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem; color: var(--text-secondary);">3. Delta 3 ($\Delta_3$) <span style="font-size: 0.9rem; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 4px; vertical-align: middle; margin-left: 10px; letter-spacing: 1px;">COMING SOON</span></h2>
+                <p><strong>The next level of Theorycrafting.</strong></p>
+                <p>What happens when we expand the time horizon and let the weight of history speak for itself? Is it possible to absolutely and definitively neutralize the fleeting impact of patches and meta trends?</p>
+                <p>A new layer of statistical depth is currently under development in the BTP laboratories. <strong>Stay tuned to the web and our future updates... The mystery is yet to be revealed!</strong></p>
+            </div>
+            
+            <div class="feature-image" style="background: rgba(var(--bg-base-rgb), 0.5); padding: 50px; border-radius: 8px; border: 2px dashed var(--text-muted); box-shadow: inset 0 0 30px rgba(0,0,0,0.5); text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="font-size: 4rem; color: var(--text-muted); margin-bottom: 15px; font-weight: bold; text-shadow: 0 0 10px rgba(0,0,0,0.8);">?</div>
+                <h3 style="color: var(--text-secondary); text-transform: uppercase; letter-spacing: 3px; font-size: 1.2rem;">Classified File</h3>
+                <p style="color: var(--text-muted); margin-top: 15px; font-family: monospace; font-size: 0.9rem;">
+                    [>] Compiling patch chronology...<br>
+                    [>] Level 3 temporal encryption active.<br>
+                    <span style="color: var(--accent); animation: pulse 2s infinite;">[>] Awaiting decryption...</span>
+                </p>
+            </div>
+        </div>
+
     </section>
 
-        <footer>
+    <section style="text-align: center; padding: 60px 10%; background: var(--bg-card); border-top: 1px solid var(--accent);">
+        <h2 style="color: var(--accent); margin-bottom: 20px; font-size: 2rem; text-transform: uppercase; letter-spacing: 2px;">Ready to get started?</h2>
+        <p style="margin-bottom: 30px; font-size: 1.1rem;">Download the latest version and start tracking your progress today.</p>
+        <a href="download.html" class="btn-main">Go to Downloads</a>
+    </section>
+
+    <footer>
         <p>&copy; 2026 BTP - Best Trick Pony Project. Made with ⚡ for the Rift.</p>
         <div style="margin-top: 15px; font-size: 0.8rem;">
-            <a href="legal.html" style="color: var(--turquesa); text-decoration: none; margin: 0 10px;">Legal & Cookies</a> | 
-            <a href="about.html" style="color: var(--turquesa); text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+            <a href="legal.html" style="color: var(--accent); text-decoration: none; margin: 0 10px; opacity: 0.8; transition: 0.3s;">Legal Notice & Cookies</a>
+            <span style="color: var(--text-dim);">|</span>
+            <a href="about.html" style="color: var(--accent); text-decoration: none; margin: 0 10px; opacity: 0.8; transition: 0.3s;">Privacy Policy</a>
         </div>
         <p style="margin-top: 15px; font-size: 0.7rem; color: var(--text-dim); opacity: 0.5;">
-            BTP isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties.
+            BTP isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends.
         </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
