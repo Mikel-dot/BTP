@@ -17,15 +17,25 @@
     <meta property="og:image" content="assets/screenshot_home_btp.png">
     
     <link rel="stylesheet" href="style.css">
+
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
     
-<nav class="glass-nav">
+    <nav class="glass-nav">
         <a href="index-es.html" class="nav-brand">
             <img src="assets/icono.png" alt="BTP Logo" class="nav-logo-img">
             <span>BTP</span>
         </a>
-<div class="nav-links">
+        <div class="nav-links">
             <a href="index-es.html">Inicio</a>
             <a href="about-es.html">Privacidad</a>
             <a href="how-to-es.html" class="active">Guía</a>
@@ -33,10 +43,10 @@
             <a href="next-es.html">Futuro</a>
             
             <div class="lang-toggle">
-                <a href="index-es.html" class="lang-active" title="Español">
+                <a href="how-to-es.html" class="lang-active" title="Español">
                     <img src="https://flagcdn.com/es.svg" alt="ES">
                 </a>
-                <a href="index.html" title="English">
+                <a href="how-to.html" title="English">
                     <img src="https://flagcdn.com/gb.svg" alt="EN">
                 </a>
             </div>
@@ -91,13 +101,116 @@
                 <p>Cuando el Nexo explote, BTP detectará el final del juego y lanzará un <strong>Mini-Popup</strong> en tu pantalla. Tómate 10 segundos para puntuar tus sensaciones, visión y farmeo. BTP cruzará tus notas con las estadísticas oficiales y lo guardará en tu historial de Self-Coaching.</p>
             </div>
         </div>
+        <div style="text-align: center; margin: 100px auto 30px; max-width: 800px; padding-top: 40px; border-top: 1px solid rgba(var(--accent-rgb), 0.15);">
+            <h2 style="font-size: 2.5rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px var(--accent-glow); margin-bottom: 20px;">Análisis Estadístico Avanzado</h2>
+            <p style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 15px;">Para ofrecer recomendaciones precisas en la fase de selección, BTP no se basa en el porcentaje de victorias bruto. Utilizamos un <strong>sistema de Deltas</strong> que aísla la verdadera ventaja estructural de cada enfrentamiento y destroza los mitos del Winrate.</p>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); background: rgba(var(--accent-rgb), 0.05); padding: 15px; border-radius: 8px; border: 1px dashed rgba(var(--accent-rgb), 0.3);">
+                <em><strong>Nota:</strong> A continuación detallaremos paso a paso el cálculo matemático utilizando los <strong>Counters</strong> (enemigos) como ejemplo. El cálculo para las <strong>Sinergias</strong> (aliados) es completamente análogo, sumando sus fuerzas en lugar de restarlas ($E[WR] = WR_A + WR_B - 0.5$).</em>
+            </p>
+        </div>
+
+        <div style="background: rgba(var(--accent-rgb), 0.05); border-left: 4px solid var(--accent); padding: 25px; margin: 0 auto 60px; max-width: 800px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">En resumen:</h3>
+            <p style="margin-bottom: 12px; font-size: 1.05rem;">
+                <strong style="color: var(--text-primary);">$\Delta_1$ (Delta Bruto):</strong> Refleja el <strong>impacto personal</strong> directo. ¿Pierdes o ganas más de lo normal contra este campeón?
+            </p>
+            <p style="margin-bottom: 12px; font-size: 1.05rem;">
+                <strong style="color: var(--text-primary);">$\Delta_2$ (Delta Normalizado):</strong> Refleja la <strong>ventaja real del kit de habilidades</strong>. Aísla el meta para decirte si tu campeón es un counter auténtico, ignorando si el enemigo está "roto" o nerfeado.
+            </p>
+            <p style="margin-bottom: 0; font-size: 1.05rem;">
+                <strong style="color: var(--text-secondary);">$\Delta_3$ (Clasificado):</strong> Refleja... <em>[Por desvelar. Próximamente]</em>.
+            </p>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem;">1. Delta Bruto ($\Delta_1$)</h2>
+                <p>El Delta 1 representa el Impacto Personal. Responde a la pregunta: <em>¿Cómo altera este enfrentamiento mi probabilidad habitual de ganar?</em></p>
+                <p><strong>La trampa del Delta 1:</strong> Si miras el ejemplo de la derecha, verás que Darius pierde un 3% de winrate cuando juega contra Teemo. Las webs tradicionales te dirán: *"¡Teemo es counter de Darius!"*.</p>
+                <p>Pero, ¿es esto cierto? ¿Le hace counter porque las mecánicas de Teemo anulan a Darius, o simplemente Teemo está estadísticamente muy fuerte en este parche y le está ganando a todo el mundo por igual? El Delta 1 es ciego ante esto y nos puede engañar haciéndonos banear al campeón equivocado.</p>
+            </div>
+            
+            <div class="feature-image" style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid rgba(var(--accent-rgb), 0.2); box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.05);">
+                <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase;">La Fórmula</h3>
+                <ul style="color: var(--text-secondary); margin-left: 20px; margin-bottom: 20px; font-size: 0.95rem;">
+                    <li style="margin-bottom: 8px;"><strong>$WR_{real}$:</strong> El winrate histórico de tu campeón <em>específicamente</em> cuando tiene a ese enemigo enfrente.</li>
+                    <li><strong>$WR_{A}$:</strong> El winrate medio de tu campeón contra el resto del mundo.</li>
+                </ul>
+                <div style="font-size: 1.3rem; text-align: center; margin: 20px 0; color: var(--text-primary);">
+                    $$ \Delta_1 = (WR_{real} - WR_{A}) \times 100 $$
+                </div>
+                <div class="example-box" style="margin: 0; padding: 15px; font-size: 0.9rem; border-color: var(--accent);">
+                    <strong style="color: var(--accent);">El Espejismo del Counter:</strong><br><br>
+                    Juegas <strong>Darius</strong> (Winrate habitual $WR_{A} = 51\%$).<br>
+                    Los datos dicen que contra <strong>Teemo</strong>, Darius solo gana el $48\%$ de las partidas ($WR_{real}$).<br><br>
+                    $\Delta_1 = (0.48 - 0.51) \times 100 = \textbf{-3.00\%}$<br><br>
+                    <strong>Conclusión aparente:</strong> Jugar contra Teemo te penaliza un 3%. Parecería el counter definitivo, pero la fórmula está ignorando el estado global de Teemo.
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem;">2. Delta Normalizado ($\Delta_2$)</h2>
+                <p>Aquí es donde entra la magia de BTP. Para saber si Teemo es un *verdadero counter* de Darius, calculamos primero el <strong>Winrate Esperado ($E[WR]$)</strong>. Es decir, cruzamos el estado de forma general de ambos campeones para saber qué dicen las matemáticas que "debería" pasar.</p>
+                <p>Al restar el Winrate Esperado al Winrate Real, obtenemos la <strong>Ventaja Real ($\Delta_2$)</strong>, filtrando por completo si el enemigo está roto o nerfeado.</p>
+                <p>Como verás en el ejemplo de la derecha, un $\Delta_1$ negativo puede convertirse en un $\Delta_2$ increíblemente positivo. Esto significa que el kit de tu campeón anula naturalmente al enemigo, incluso si está "roto". <strong>Este es el dato maestro que ordena la Tier List en tu Draft.</strong></p>
+            </div>
+
+            <div class="feature-image" style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid rgba(var(--accent-rgb), 0.2); box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.05);">
+                <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase;">Descubriendo la Verdad</h3>
+                
+                <ul style="color: var(--text-secondary); margin-left: 20px; margin-bottom: 15px; font-size: 0.95rem;">
+                    <li style="margin-bottom: 8px;"><strong>$WR_{A}$:</strong> El winrate global de tu campeón.</li>
+                    <li style="margin-bottom: 8px;"><strong>$WR_{B}$:</strong> El winrate global del enemigo en este parche.</li>
+                    <li><strong>$E[WR]$:</strong> El Winrate Esperado (la predicción matemática).</li>
+                </ul>
+
+                <div style="font-size: 1.1rem; text-align: center; margin: 10px 0; color: var(--text-primary);">
+                    $$ E[WR] = WR_{A} - WR_{B} + 0.5 $$
+                </div>
+                <div style="font-size: 1.3rem; text-align: center; margin: 15px 0; color: var(--accent);">
+                    $$ \Delta_2 = (WR_{real} - E[WR]) \times 100 $$
+                </div>
+                
+                <div class="example-box" style="margin: 0; padding: 15px; font-size: 0.9rem; border-color: var(--accent);">
+                    <strong style="color: var(--accent);">La Resolución del Caso Teemo:</strong><br><br>
+                    Descubrimos que en este parche <strong>Teemo está increíblemente roto</strong> ($WR_{B} = 58\%$).<br>
+                    Matemáticamente, tu <strong>Darius</strong> ($WR_{A} = 51\%$) "debería" ganar solo el $43\%$ de las partidas contra una aberración estadística así ($E[WR] = 0.51 - 0.58 + 0.5 = 0.43$). <br><br>
+                    Sin embargo, los datos de la tarjeta anterior nos dijeron que Darius le gana un $48\%$ ($WR_{real}$).<br><br>
+                    $\Delta_2 = (0.48 - 0.43) \times 100 = \textbf{+5.00\%}$<br><br>
+                    <strong>La Realidad:</strong> Aunque el Delta 1 era del -3.00%, el Delta 2 revela un +5.00%. Teemo no le hace counter a Darius; Teemo le gana a todos, pero Darius es <strong>una de las mejores respuestas del juego</strong> para frenarlo.
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem; color: var(--text-secondary);">3. Delta 3 ($\Delta_3$) <span style="font-size: 0.9rem; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 4px; vertical-align: middle; margin-left: 10px; letter-spacing: 1px;">COMING SOON</span></h2>
+                <p><strong>El siguiente nivel del Theorycrafting.</strong></p>
+                <p>¿Qué ocurre cuando expandimos el horizonte temporal y dejamos que el peso de la historia hable por sí solo? ¿Es posible neutralizar de forma absoluta y definitiva el impacto efímero de los parches y las modas del meta?</p>
+                <p>Una nueva capa de profundidad estadística está actualmente en desarrollo en los laboratorios de BTP. <strong>Atentos a la web y a nuestras futuras actualizaciones... ¡El misterio está por desvelar!</strong></p>
+            </div>
+            
+            <div class="feature-image" style="background: rgba(var(--bg-base-rgb), 0.5); padding: 50px; border-radius: 8px; border: 2px dashed var(--text-muted); box-shadow: inset 0 0 30px rgba(0,0,0,0.5); text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="font-size: 4rem; color: var(--text-muted); margin-bottom: 15px; font-weight: bold; text-shadow: 0 0 10px rgba(0,0,0,0.8);">?</div>
+                <h3 style="color: var(--text-secondary); text-transform: uppercase; letter-spacing: 3px; font-size: 1.2rem;">Archivo Clasificado</h3>
+                <p style="color: var(--text-muted); margin-top: 15px; font-family: monospace; font-size: 0.9rem;">
+                    [>] Recopilando cronología de parches...<br>
+                    [>] Encriptación temporal nivel 3 activa.<br>
+                    <span style="color: var(--accent); animation: pulse 2s infinite;">[>] Esperando desencriptación...</span>
+                </p>
+            </div>
+        </div>
 
     </section>
+        
+    
 
     <section style="text-align: center; padding: 60px 10%; background: var(--bg-card); border-top: 1px solid var(--turquesa);">
-        <h2 style="color: var(--turquesa); margin-bottom: 20px;">¿Todo listo para empezar?</h2>
+        <h2 style="color: var(--turquesa); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">¿Todo listo para empezar?</h2>
         <p style="margin-bottom: 30px; font-size: 1.1rem;">Descarga la última versión y empieza a trackear tu progreso hoy mismo.</p>
-        <a href="download.html" class="btn-main">Ir a Descargas</a>
+        <a href="download-es.html" class="btn-main">Ir a Descargas</a>
     </section>
 
     <footer>
