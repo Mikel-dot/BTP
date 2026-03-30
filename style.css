@@ -1,21 +1,79 @@
+/* =========================================================
+   VARIABLES GLOBALES Y TEMAS (DARK MODE GAMING)
+========================================================= */
+
+/* TEMA 1: HEXTECH GLOW (POR DEFECTO) */
 :root {
-    --bg-dark: #010a13;
-    --bg-card: #0a1428;
-    --turquesa: #00f2ff; /* Turquesa Eléctrico */
-    --turquesa-glow: rgba(0, 242, 255, 0.5);
-    --text-main: #f0f5f5;
-    --text-dim: #a09b8c;
+    --bg-base: #010a13;
+    --bg-base-rgb: 1, 10, 19;
+    --bg-surface: #0a1428;
+    
+    --accent: #00f2ff;
+    --accent-rgb: 0, 242, 255;
+    --accent-glow: rgba(0, 242, 255, 0.5);
+    
+    --text-primary: #f0f5f5;
+    --text-secondary: #a09b8c;
     --negative: #ff4655;
 }
+
+/* TEMA 2: FURIA NOXIANA */
+body.theme-noxus {
+    --bg-base: #0F0F0F;
+    --bg-base-rgb: 15, 15, 15;
+    --bg-surface: #1A1818;
+    
+    --accent: #E22C2C;
+    --accent-rgb: 226, 44, 44;
+    --accent-glow: rgba(226, 44, 44, 0.5);
+}
+
+/* TEMA 3: EL VACÍO */
+body.theme-void {
+    --bg-base: #110D17;
+    --bg-base-rgb: 17, 13, 23;
+    --bg-surface: #1D1726;
+    
+    --accent: #A959FF;
+    --accent-rgb: 169, 89, 255;
+    --accent-glow: rgba(169, 89, 255, 0.5);
+}
+
+/* TEMA 4: RADIACTIVIDAD ZAUNITA */
+body.theme-zaun {
+    --bg-base: #0D1117;
+    --bg-base-rgb: 13, 17, 23;
+    --bg-surface: #161B22;
+    
+    --accent: #39D353;
+    --accent-rgb: 57, 211, 83;
+    --accent-glow: rgba(57, 211, 83, 0.5);
+}
+
+/* TEMA 5: ASCENSO DE DEMACIA */
+body.theme-demacia {
+    --bg-base: #091F36;
+    --bg-base-rgb: 9, 31, 54;
+    --bg-surface: #1B3B60;
+    
+    --accent: #FEF3C7;
+    --accent-rgb: 254, 243, 199;
+    --accent-glow: rgba(254, 243, 199, 0.5);
+}
+
+/* =========================================================
+   ESTILOS BASE
+========================================================= */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* --- NAVEGACIÓN PREMIUM (GLASSMORPHISM) --- */
@@ -24,19 +82,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 8%;
-    /* Efecto cristal oscuro */
-    background: rgba(1, 10, 19, 0.75); 
+    /* Efecto cristal adaptativo al tema */
+    background: rgba(var(--bg-base-rgb), 0.75); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    /* Borde inferior sutil y sombra para separarlo del fondo */
-    border-bottom: 1px solid rgba(0, 242, 255, 0.15);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* El logo de la izquierda */
 .nav-brand {
     display: flex;
     align-items: center;
@@ -53,8 +109,8 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 1px solid var(--turquesa);
-    box-shadow: 0 0 10px var(--turquesa-glow);
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
     object-fit: cover;
 }
 
@@ -66,14 +122,13 @@ body {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Los enlaces de la derecha */
 .nav-links {
     display: flex;
-    gap: 10px; /* Separación entre botones */
+    gap: 10px;
 }
 
 .nav-links a {
-    color: var(--text-dim);
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 700;
@@ -82,107 +137,105 @@ body {
     padding: 8px 18px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    border: 1px solid transparent; /* Prepara el borde para el hover */
+    border: 1px solid transparent;
 }
 
-/* Efecto al pasar el ratón */
 .nav-links a:hover {
     color: #ffffff;
-    background: rgba(0, 242, 255, 0.08);
-    border-color: rgba(0, 242, 255, 0.3);
-    text-shadow: 0 0 8px var(--turquesa-glow);
+    background: rgba(var(--accent-rgb), 0.08);
+    border-color: rgba(var(--accent-rgb), 0.3);
+    text-shadow: 0 0 8px var(--accent-glow);
 }
 
-/* La página en la que estás actualmente */
 .nav-links a.active {
-    color: var(--bg-dark);
-    background: var(--turquesa);
-    border-color: var(--turquesa);
-    box-shadow: 0 0 15px var(--turquesa-glow);
-    text-shadow: none; /* Quitamos la sombra del texto para que lea bien sobre el fondo claro */
+    color: var(--bg-base);
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+    text-shadow: none;
 }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .hero {
     text-align: center;
     padding: 120px 10% 80px;
-    background: radial-gradient(circle at center, #003035 0%, var(--bg-dark) 70%);
+    /* Gradiente radial adaptativo al tema */
+    background: radial-gradient(circle at center, rgba(var(--accent-rgb), 0.15) 0%, var(--bg-base) 70%);
 }
 
 .hero-title {
     font-size: 4.5rem;
     font-weight: 900;
-    color: var(--turquesa);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 5px;
-    text-shadow: 0 0 30px var(--turquesa-glow);
+    text-shadow: 0 0 30px var(--accent-glow);
     margin-bottom: 20px;
 }
 
-/* --- EL LOGO CENTRAL BRILLANTE --- */
 .hero-logo {
-    width: 140px; /* Tamaño del logo */
+    width: 140px;
     height: 140px;
-    border-radius: 50%; /* Lo hace redondo */
-    border: 2px solid var(--turquesa);
-    background: var(--bg-card); /* Por si el PNG tiene fondo transparente */
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--bg-surface);
     object-fit: cover;
     display: block;
-    margin: 0 auto 25px auto; /* Centrado y con margen abajo */
-    
-    /* El mismo efecto de luz hacia atrás */
+    margin: 0 auto 25px auto;
     box-shadow: 
-        0 0 20px var(--turquesa-glow),          
-        0 0 60px rgba(0, 242, 255, 0.2),       
-        inset 0 0 15px rgba(0, 242, 255, 0.1); 
+        0 0 20px var(--accent-glow),          
+        0 0 60px rgba(var(--accent-rgb), 0.2),       
+        inset 0 0 15px rgba(var(--accent-rgb), 0.1); 
     transition: 0.5s ease;
 }
 
-/* Efecto al pasar el ratón */
 .hero-logo:hover {
     box-shadow: 
-        0 0 30px var(--turquesa),
-        0 0 80px rgba(0, 242, 255, 0.4);
-    transform: scale(1.05); /* Se hace un pelín más grande */
+        0 0 30px var(--accent),
+        0 0 80px rgba(var(--accent-rgb), 0.4);
+    transform: scale(1.05);
 }
 
-/* --- LA ESTRELLA: Captura con Brillo Trasero --- */
+/* --- ESTRELLAS Y CAPTURAS --- */
 .glowing-screenshot-container {
     position: relative;
     margin: 60px auto;
     max-width: 1000px;
-    padding: 10px; /* Espacio para el brillo */
+    padding: 10px;
 }
 
 .glowing-screenshot-container img {
     width: 100%;
     display: block;
-    border: 2px solid var(--turquesa);
+    border: 2px solid var(--accent);
     border-radius: 4px;
-    /* El efecto de luz hacia atrás (box-shadow) */
     box-shadow: 
-        0 0 20px var(--turquesa-glow),          /* Brillo medio */
-        0 0 60px rgba(0, 242, 255, 0.2),       /* Brillo suave exterior */
-        inset 0 0 15px rgba(0, 242, 255, 0.1); /* Brillo interno sutil */
+        0 0 20px var(--accent-glow),          
+        0 0 60px rgba(var(--accent-rgb), 0.2),       
+        inset 0 0 15px rgba(var(--accent-rgb), 0.1); 
     transition: 0.5s;
 }
 
-/* Efecto hover opcional para que la luz "baile" */
 .glowing-screenshot-container img:hover {
     box-shadow: 
-        0 0 30px var(--turquesa),
-        0 0 80px rgba(0, 242, 255, 0.3);
+        0 0 30px var(--accent),
+        0 0 80px rgba(var(--accent-rgb), 0.3);
 }
 
-/* Bloques de Filosofía/Texto */
+.glowing-screenshot-container.vertical {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* --- SECCIONES DE TEXTO --- */
 .philosophy-section {
     padding: 60px 15%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    background: var(--bg-card);
-    border-top: 1px solid rgba(0, 242, 255, 0.1);
-    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+    background: var(--bg-surface);
+    border-top: 1px solid rgba(var(--accent-rgb), 0.1);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
 }
 
 .philosophy-card {
@@ -190,7 +243,7 @@ body {
 }
 
 .philosophy-card h3 {
-    color: var(--turquesa);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 15px;
@@ -198,17 +251,17 @@ body {
 }
 
 .philosophy-card p {
-    color: var(--text-dim);
+    color: var(--text-secondary);
     font-size: 1rem;
     margin-bottom: 10px;
 }
 
-/* Botones */
+/* --- BOTONES --- */
 .btn-main {
     display: inline-block;
     padding: 18px 45px;
-    border: 2px solid var(--turquesa);
-    color: var(--turquesa);
+    border: 2px solid var(--accent);
+    color: var(--accent);
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -218,24 +271,16 @@ body {
 }
 
 .btn-main:hover {
-    background: var(--turquesa);
-    color: var(--bg-dark);
-    box-shadow: 0 0 30px var(--turquesa-glow);
+    background: var(--accent);
+    color: var(--bg-base);
+    box-shadow: 0 0 30px var(--accent-glow);
     transform: translateY(-2px);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 0.8rem;
-    color: var(--text-dim);
-}
-
-/* --- SECCIÓN DE FUNCIONALIDADES (ZIG-ZAG) --- */
+/* --- FUNCIONALIDADES (ZIG-ZAG) --- */
 .features-showcase {
     padding: 80px 10%;
-    background: var(--bg-dark);
+    background: var(--bg-base);
 }
 
 .feature-row {
@@ -245,7 +290,6 @@ footer {
     margin-bottom: 100px;
 }
 
-/* Invierte el orden para el efecto Zig-Zag */
 .feature-row.reverse {
     flex-direction: row-reverse;
 }
@@ -256,50 +300,45 @@ footer {
 
 .feature-text h2 {
     font-size: 2.5rem;
-    color: var(--turquesa);
+    color: var(--accent);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 15px var(--turquesa-glow);
+    text-shadow: 0 0 15px var(--accent-glow);
 }
+
 
 .feature-text p {
     font-size: 1.15rem;
     margin-bottom: 15px;
-    color: var(--text-main);
+    color: var(--text-primary);
 }
 
 .feature-text .beta-note {
     font-size: 0.95rem;
-    color: var(--text-dim);
-    border-left: 2px solid var(--turquesa);
+    color: var(--text-secondary);
+    border-left: 2px solid var(--accent);
     padding-left: 15px;
     margin-top: 20px;
 }
 
 .feature-image {
     flex: 1;
-    margin: 0; /* Reseteamos el margin auto para que encaje bien en la columna */
+    margin: 0;
 }
 
-/* Para que en móviles se vea bien y no se aplaste */
-@media (max-width: 900px) {
-    .feature-row, .feature-row.reverse {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    .feature-text .beta-note {
-        border-left: none;
-        border-top: 2px solid var(--turquesa);
-        padding-top: 15px;
-        padding-left: 0;
-    }
+/* --- METODOLOGÍA (CAJAS DE EJEMPLO) --- */
+.example-box {
+    background-color: var(--bg-surface);
+    padding: 20px;
+    border-left: 4px solid var(--accent);
+    margin: 20px 0;
+    border-radius: 4px;
 }
-/* Variante para imágenes verticales (Modales, Configuración, etc.) */
-.glowing-screenshot-container.vertical {
-    max-width: 350px; /* Evita que la imagen vertical se haga gigante */
-    margin: 0 auto;
+
+.highlight-text {
+    color: var(--text-primary);
+    font-weight: bold;
 }
 
 /* --- SELECTOR DE IDIOMA --- */
@@ -308,12 +347,12 @@ footer {
     align-items: center;
     gap: 8px;
     margin-left: 20px;
-    border-left: 1px solid rgba(0, 242, 255, 0.2);
+    border-left: 1px solid rgba(var(--accent-rgb), 0.2);
     padding-left: 20px;
 }
 
 .lang-toggle a {
-    color: var(--text-dim);
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: bold;
@@ -322,11 +361,11 @@ footer {
 
 .lang-toggle a:hover {
     color: #ffffff;
-    text-shadow: 0 0 8px var(--turquesa-glow);
+    text-shadow: 0 0 8px var(--accent-glow);
 }
 
 .lang-toggle a.lang-active {
-    color: var(--turquesa);
+    color: var(--accent);
 }
 
 .lang-toggle img {
@@ -338,28 +377,52 @@ footer {
     transition: 0.3s;
 }
 
+.lang-toggle a.lang-active img, .lang-toggle a:hover img {
+    opacity: 1;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
 /* --- ADAPTACIÓN PARA MÓVILES (RESPONSIVE) --- */
+@media (max-width: 900px) {
+    .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .feature-text .beta-note {
+        border-left: none;
+        border-top: 2px solid var(--accent);
+        padding-top: 15px;
+        padding-left: 0;
+    }
+}
+
 @media (max-width: 768px) {
-    
-    /* 1. Arreglar la barra de navegación (Nav) */
     .glass-nav {
-        flex-direction: column; /* Apila el logo arriba y los links abajo */
+        flex-direction: column;
         padding: 15px 5%;
         gap: 15px;
     }
     
     .nav-links {
-        flex-wrap: wrap; /* Permite que los botones salten a la siguiente línea si no caben */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
     }
 
     .nav-links a {
-        padding: 6px 10px; /* Botones un poco más pequeños */
+        padding: 6px 10px;
         font-size: 0.75rem;
     }
 
-    /* El selector de idioma en móvil */
     .lang-toggle {
         margin-left: 0;
         padding-left: 0;
@@ -369,10 +432,9 @@ footer {
         margin-top: 5px;
     }
 
-    /* 2. Arreglar las cartas de Filosofía */
     .philosophy-section {
         display: flex;
-        flex-direction: column; /* Pone una carta debajo de la otra */
+        flex-direction: column;
         padding: 40px 5%;
         gap: 20px;
     }
@@ -383,13 +445,7 @@ footer {
         margin: 0;
     }
     
-    /* 3. Ajuste extra: Reducir el título gigante para que no se salga de la pantalla */
     .hero-title {
         font-size: 2.5rem !important;
     }
-}
-
-.lang-toggle a.lang-active img, .lang-toggle a:hover img {
-    opacity: 1;
-    box-shadow: 0 0 10px var(--turquesa-glow);
 }
