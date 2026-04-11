@@ -1,0 +1,2682 @@
+{
+  "champion_id": 711,
+  "champion_name": "Vex",
+  "default_role": "MID",
+  "available_roles": [
+    "MID"
+  ],
+  "selected_patch": "16.7",
+  "selected_patches": [
+    "16.6",
+    "16.7"
+  ],
+  "selected_ranks": [
+    "CHALLENGER",
+    "DIAMOND",
+    "EMERALD",
+    "GRANDMASTER",
+    "MASTER"
+  ],
+  "available_patches": [
+    "16.6",
+    "16.7"
+  ],
+  "available_ranks": [
+    "CHALLENGER",
+    "DIAMOND",
+    "EMERALD",
+    "GRANDMASTER",
+    "MASTER"
+  ],
+  "total_games_analyzed": 160809,
+  "data_filters_locked": true,
+  "roles": {
+    "MID": {
+      "champion_id": 711,
+      "champion_name": "Vex",
+      "available_patches": [
+        "16.6",
+        "16.7"
+      ],
+      "selected_patch": "16.7",
+      "selected_patches": [
+        "16.6",
+        "16.7"
+      ],
+      "available_ranks": [
+        "CHALLENGER",
+        "DIAMOND",
+        "EMERALD",
+        "GRANDMASTER",
+        "MASTER"
+      ],
+      "selected_ranks": [
+        "CHALLENGER",
+        "DIAMOND",
+        "EMERALD",
+        "GRANDMASTER",
+        "MASTER"
+      ],
+      "available_roles": [
+        "TOP",
+        "JGL",
+        "MID",
+        "ADC",
+        "SUP"
+      ],
+      "selected_role": "MID",
+      "summary": {
+        "games_played": 3825,
+        "win_rate": 51.45,
+        "pick_rate": 1.31,
+        "ban_rate": 2.99
+      },
+      "synergies": {
+        "rows": [
+          {
+            "role_key": "TOP",
+            "entries": [
+              {
+                "champion_id": 86,
+                "name": "Garen",
+                "delta_1": 6.4278,
+                "delta": 5.6435,
+                "matches": 212
+              },
+              {
+                "champion_id": 516,
+                "name": "Ornn",
+                "delta_1": 4.486,
+                "delta": 2.8103,
+                "matches": 131
+              },
+              {
+                "champion_id": 14,
+                "name": "Sion",
+                "delta_1": -4.5281,
+                "delta": -3.7081,
+                "matches": 124
+              },
+              {
+                "champion_id": 122,
+                "name": "Darius",
+                "delta_1": -4.9668,
+                "delta": -4.3701,
+                "matches": 124
+              },
+              {
+                "champion_id": 24,
+                "name": "Jax",
+                "delta_1": -10.9135,
+                "delta": -9.6584,
+                "matches": 116
+              },
+              {
+                "champion_id": 54,
+                "name": "Malphite",
+                "delta_1": 0.4621,
+                "delta": -0.6521,
+                "matches": 114
+              },
+              {
+                "champion_id": 58,
+                "name": "Renekton",
+                "delta_1": -2.693,
+                "delta": -1.5365,
+                "matches": 105
+              },
+              {
+                "champion_id": 98,
+                "name": "Shen",
+                "delta_1": 0.1038,
+                "delta": -1.1627,
+                "matches": 101
+              },
+              {
+                "champion_id": 266,
+                "name": "Aatrox",
+                "delta_1": 2.5335,
+                "delta": 2.9069,
+                "matches": 96
+              },
+              {
+                "champion_id": 799,
+                "name": "Ambessa",
+                "delta_1": -2.6591,
+                "delta": -2.4199,
+                "matches": 95
+              },
+              {
+                "champion_id": 150,
+                "name": "Gnar",
+                "delta_1": -4.5149,
+                "delta": -2.75,
+                "matches": 94
+              },
+              {
+                "champion_id": 875,
+                "name": "Sett",
+                "delta_1": -9.1714,
+                "delta": -9.8579,
+                "matches": 92
+              },
+              {
+                "champion_id": 904,
+                "name": "Zaahen",
+                "delta_1": -0.3014,
+                "delta": -0.5392,
+                "matches": 90
+              },
+              {
+                "champion_id": 114,
+                "name": "Fiora",
+                "delta_1": -2.3543,
+                "delta": -2.4094,
+                "matches": 87
+              },
+              {
+                "champion_id": 83,
+                "name": "Yorick",
+                "delta_1": 1.7716,
+                "delta": 1.9769,
+                "matches": 81
+              },
+              {
+                "champion_id": 82,
+                "name": "Mordekaiser",
+                "delta_1": 1.1082,
+                "delta": 0.5792,
+                "matches": 79
+              },
+              {
+                "champion_id": 897,
+                "name": "K'Sante",
+                "delta_1": -6.5042,
+                "delta": -2.713,
+                "matches": 79
+              },
+              {
+                "champion_id": 41,
+                "name": "Gangplank",
+                "delta_1": -3.6532,
+                "delta": -5.0156,
+                "matches": 78
+              },
+              {
+                "champion_id": 39,
+                "name": "Irelia",
+                "delta_1": 9.9157,
+                "delta": 10.6355,
+                "matches": 75
+              },
+              {
+                "champion_id": 777,
+                "name": "Yone",
+                "delta_1": -11.7714,
+                "delta": -11.3184,
+                "matches": 70
+              },
+              {
+                "champion_id": 75,
+                "name": "Nasus",
+                "delta_1": 5.281,
+                "delta": 6.6707,
+                "matches": 69
+              },
+              {
+                "champion_id": 92,
+                "name": "Riven",
+                "delta_1": -1.0255,
+                "delta": -1.2954,
+                "matches": 69
+              },
+              {
+                "champion_id": 27,
+                "name": "Singed",
+                "delta_1": 5.2115,
+                "delta": 3.0762,
+                "matches": 65
+              },
+              {
+                "champion_id": 67,
+                "name": "Vayne",
+                "delta_1": -3.7206,
+                "delta": -4.5637,
+                "matches": 65
+              },
+              {
+                "champion_id": 36,
+                "name": "Dr. Mundo",
+                "delta_1": -4.9395,
+                "delta": -2.8686,
+                "matches": 64
+              }
+            ]
+          },
+          {
+            "role_key": "JGL",
+            "entries": [
+              {
+                "champion_id": 104,
+                "name": "Graves",
+                "delta_1": 0.0574,
+                "delta": 0.0144,
+                "matches": 197
+              },
+              {
+                "champion_id": 59,
+                "name": "Jarvan IV",
+                "delta_1": -5.108,
+                "delta": -5.6508,
+                "matches": 197
+              },
+              {
+                "champion_id": 234,
+                "name": "Viego",
+                "delta_1": -9.5442,
+                "delta": -8.4531,
+                "matches": 179
+              },
+              {
+                "champion_id": 56,
+                "name": "Nocturne",
+                "delta_1": 5.0055,
+                "delta": 4.0398,
+                "matches": 166
+              },
+              {
+                "champion_id": 102,
+                "name": "Shyvana",
+                "delta_1": -3.492,
+                "delta": -0.2531,
+                "matches": 147
+              },
+              {
+                "champion_id": 91,
+                "name": "Talon",
+                "delta_1": 7.3973,
+                "delta": 6.6819,
+                "matches": 131
+              },
+              {
+                "champion_id": 950,
+                "name": "Naafiri",
+                "delta_1": 0.7328,
+                "delta": -0.6896,
+                "matches": 130
+              },
+              {
+                "champion_id": 64,
+                "name": "Lee Sin",
+                "delta_1": 0.5472,
+                "delta": 1.6257,
+                "matches": 129
+              },
+              {
+                "champion_id": 121,
+                "name": "Kha'Zix",
+                "delta_1": 1.1752,
+                "delta": 1.0181,
+                "matches": 125
+              },
+              {
+                "champion_id": 799,
+                "name": "Ambessa",
+                "delta_1": 9.7263,
+                "delta": 10.3517,
+                "matches": 115
+              },
+              {
+                "champion_id": 36,
+                "name": "Dr. Mundo",
+                "delta_1": 3.7852,
+                "delta": 3.7552,
+                "matches": 111
+              },
+              {
+                "champion_id": 120,
+                "name": "Hecarim",
+                "delta_1": 1.7392,
+                "delta": 0.3583,
+                "matches": 104
+              },
+              {
+                "champion_id": 11,
+                "name": "Maestro Yi",
+                "delta_1": -6.0001,
+                "delta": -6.6148,
+                "matches": 101
+              },
+              {
+                "champion_id": 107,
+                "name": "Rengar",
+                "delta_1": -1.0997,
+                "delta": -0.3423,
+                "matches": 100
+              },
+              {
+                "champion_id": 5,
+                "name": "Xin Zhao",
+                "delta_1": 8.5086,
+                "delta": 8.65,
+                "matches": 97
+              },
+              {
+                "champion_id": 141,
+                "name": "Kayn",
+                "delta_1": -3.2213,
+                "delta": -2.5834,
+                "matches": 93
+              },
+              {
+                "champion_id": 35,
+                "name": "Shaco",
+                "delta_1": 5.3786,
+                "delta": 4.0745,
+                "matches": 83
+              },
+              {
+                "champion_id": 254,
+                "name": "Vi",
+                "delta_1": -5.6984,
+                "delta": -4.9502,
+                "matches": 81
+              },
+              {
+                "champion_id": 233,
+                "name": "Briar",
+                "delta_1": -8.8664,
+                "delta": -9.8335,
+                "matches": 81
+              },
+              {
+                "champion_id": 245,
+                "name": "Ekko",
+                "delta_1": 0.9914,
+                "delta": 1.4471,
+                "matches": 72
+              },
+              {
+                "champion_id": 20,
+                "name": "Nunu y Willump",
+                "delta_1": 5.3131,
+                "delta": 3.8272,
+                "matches": 58
+              },
+              {
+                "champion_id": 200,
+                "name": "Bel'Veth",
+                "delta_1": 3.0443,
+                "delta": 0.1772,
+                "matches": 58
+              },
+              {
+                "champion_id": 203,
+                "name": "Kindred",
+                "delta_1": -0.3057,
+                "delta": -1.6364,
+                "matches": 53
+              },
+              {
+                "champion_id": 517,
+                "name": "Sylas",
+                "delta_1": -4.6681,
+                "delta": -3.6506,
+                "matches": 53
+              },
+              {
+                "champion_id": 238,
+                "name": "Zed",
+                "delta_1": 3.663,
+                "delta": 4.1143,
+                "matches": 47
+              }
+            ]
+          },
+          {
+            "role_key": "ADC",
+            "entries": [
+              {
+                "champion_id": 222,
+                "name": "Jinx",
+                "delta_1": 0.0158,
+                "delta": -0.6981,
+                "matches": 279
+              },
+              {
+                "champion_id": 81,
+                "name": "Ezreal",
+                "delta_1": -6.4763,
+                "delta": -3.8949,
+                "matches": 279
+              },
+              {
+                "champion_id": 22,
+                "name": "Ashe",
+                "delta_1": 8.4767,
+                "delta": 6.143,
+                "matches": 267
+              },
+              {
+                "champion_id": 145,
+                "name": "Kai'Sa",
+                "delta_1": -2.1336,
+                "delta": -0.1362,
+                "matches": 254
+              },
+              {
+                "champion_id": 202,
+                "name": "Jhin",
+                "delta_1": -5.8805,
+                "delta": -6.091,
+                "matches": 251
+              },
+              {
+                "champion_id": 51,
+                "name": "Caitlyn",
+                "delta_1": 2.6787,
+                "delta": 3.3354,
+                "matches": 241
+              },
+              {
+                "champion_id": 804,
+                "name": "Yunara",
+                "delta_1": -2.273,
+                "delta": -1.0953,
+                "matches": 202
+              },
+              {
+                "champion_id": 901,
+                "name": "Smolder",
+                "delta_1": 0.6005,
+                "delta": 0.833,
+                "matches": 182
+              },
+              {
+                "champion_id": 67,
+                "name": "Vayne",
+                "delta_1": -0.4354,
+                "delta": -0.8306,
+                "matches": 142
+              },
+              {
+                "champion_id": 21,
+                "name": "Miss Fortune",
+                "delta_1": -0.7125,
+                "delta": -1.4527,
+                "matches": 122
+              },
+              {
+                "champion_id": 42,
+                "name": "Corki",
+                "delta_1": 6.4336,
+                "delta": 7.7323,
+                "matches": 118
+              },
+              {
+                "champion_id": 119,
+                "name": "Draven",
+                "delta_1": 0.4664,
+                "delta": 0.4125,
+                "matches": 117
+              },
+              {
+                "champion_id": 498,
+                "name": "Xayah",
+                "delta_1": 6.9981,
+                "delta": 4.8059,
+                "matches": 108
+              },
+              {
+                "champion_id": 15,
+                "name": "Sivir",
+                "delta_1": -8.643,
+                "delta": -8.0083,
+                "matches": 105
+              },
+              {
+                "champion_id": 523,
+                "name": "Aphelios",
+                "delta_1": -0.823,
+                "delta": 0.3734,
+                "matches": 104
+              },
+              {
+                "champion_id": 360,
+                "name": "Samira",
+                "delta_1": -1.2353,
+                "delta": -2.7545,
+                "matches": 104
+              },
+              {
+                "champion_id": 236,
+                "name": "Lucian",
+                "delta_1": 1.8477,
+                "delta": 2.374,
+                "matches": 98
+              },
+              {
+                "champion_id": 29,
+                "name": "Twitch",
+                "delta_1": 9.8595,
+                "delta": 8.8231,
+                "matches": 94
+              },
+              {
+                "champion_id": 235,
+                "name": "Senna",
+                "delta_1": 5.9421,
+                "delta": 4.0001,
+                "matches": 84
+              },
+              {
+                "champion_id": 18,
+                "name": "Tristana",
+                "delta_1": -5.3224,
+                "delta": -6.549,
+                "matches": 71
+              },
+              {
+                "champion_id": 110,
+                "name": "Varus",
+                "delta_1": -0.701,
+                "delta": 1.2446,
+                "matches": 67
+              },
+              {
+                "champion_id": 96,
+                "name": "Kog'Maw",
+                "delta_1": 1.0783,
+                "delta": -0.7802,
+                "matches": 47
+              },
+              {
+                "champion_id": 221,
+                "name": "Zeri",
+                "delta_1": 6.1312,
+                "delta": 7.3795,
+                "matches": 43
+              },
+              {
+                "champion_id": 45,
+                "name": "Veigar",
+                "delta_1": -5.0847,
+                "delta": -9.0988,
+                "matches": 43
+              },
+              {
+                "champion_id": 895,
+                "name": "Nilah",
+                "delta_1": 0.6858,
+                "delta": -1.2747,
+                "matches": 38
+              }
+            ]
+          },
+          {
+            "role_key": "SUP",
+            "entries": [
+              {
+                "champion_id": 267,
+                "name": "Nami",
+                "delta_1": -0.1809,
+                "delta": -0.8515,
+                "matches": 400
+              },
+              {
+                "champion_id": 412,
+                "name": "Thresh",
+                "delta_1": 1.6325,
+                "delta": 0.6542,
+                "matches": 244
+              },
+              {
+                "champion_id": 43,
+                "name": "Karma",
+                "delta_1": 0.3977,
+                "delta": -0.0315,
+                "matches": 223
+              },
+              {
+                "champion_id": 117,
+                "name": "Lulu",
+                "delta_1": -1.3182,
+                "delta": -1.3909,
+                "matches": 215
+              },
+              {
+                "champion_id": 111,
+                "name": "Nautilus",
+                "delta_1": 0.1197,
+                "delta": 0.4183,
+                "matches": 182
+              },
+              {
+                "champion_id": 902,
+                "name": "Milio",
+                "delta_1": 2.2985,
+                "delta": 1.594,
+                "matches": 156
+              },
+              {
+                "champion_id": 432,
+                "name": "Bardo",
+                "delta_1": 2.9899,
+                "delta": 1.7503,
+                "matches": 144
+              },
+              {
+                "champion_id": 89,
+                "name": "Leona",
+                "delta_1": -2.9709,
+                "delta": -3.2015,
+                "matches": 137
+              },
+              {
+                "champion_id": 201,
+                "name": "Braum",
+                "delta_1": 3.6469,
+                "delta": 2.364,
+                "matches": 132
+              },
+              {
+                "champion_id": 497,
+                "name": "Rakan",
+                "delta_1": -2.357,
+                "delta": -3.0798,
+                "matches": 128
+              },
+              {
+                "champion_id": 235,
+                "name": "Senna",
+                "delta_1": -2.9067,
+                "delta": -2.6294,
+                "matches": 110
+              },
+              {
+                "champion_id": 147,
+                "name": "Seraphine",
+                "delta_1": 6.8874,
+                "delta": 5.0571,
+                "matches": 109
+              },
+              {
+                "champion_id": 555,
+                "name": "Pyke",
+                "delta_1": -3.3834,
+                "delta": -2.5382,
+                "matches": 108
+              },
+              {
+                "champion_id": 40,
+                "name": "Janna",
+                "delta_1": -3.3917,
+                "delta": -4.2963,
+                "matches": 104
+              },
+              {
+                "champion_id": 12,
+                "name": "Alistar",
+                "delta_1": 2.9666,
+                "delta": 2.86,
+                "matches": 103
+              },
+              {
+                "champion_id": 37,
+                "name": "Sona",
+                "delta_1": 6.7968,
+                "delta": 5.5653,
+                "matches": 98
+              },
+              {
+                "champion_id": 53,
+                "name": "Blitzcrank",
+                "delta_1": -2.5512,
+                "delta": -2.7153,
+                "matches": 98
+              },
+              {
+                "champion_id": 526,
+                "name": "Rell",
+                "delta_1": -2.8692,
+                "delta": -3.718,
+                "matches": 90
+              },
+              {
+                "champion_id": 26,
+                "name": "Zilean",
+                "delta_1": 6.8185,
+                "delta": 4.8563,
+                "matches": 80
+              },
+              {
+                "champion_id": 16,
+                "name": "Soraka",
+                "delta_1": -0.5669,
+                "delta": -2.6608,
+                "matches": 80
+              },
+              {
+                "champion_id": 350,
+                "name": "Yuumi",
+                "delta_1": -9.8512,
+                "delta": -6.2531,
+                "matches": 75
+              },
+              {
+                "champion_id": 99,
+                "name": "Lux",
+                "delta_1": 5.7076,
+                "delta": 9.3141,
+                "matches": 63
+              },
+              {
+                "champion_id": 161,
+                "name": "Vel'Koz",
+                "delta_1": 12.8793,
+                "delta": 12.0572,
+                "matches": 61
+              },
+              {
+                "champion_id": 25,
+                "name": "Morgana",
+                "delta_1": 4.1207,
+                "delta": 6.0296,
+                "matches": 56
+              },
+              {
+                "champion_id": 518,
+                "name": "Neeko",
+                "delta_1": -6.4831,
+                "delta": -3.3102,
+                "matches": 49
+              }
+            ]
+          }
+        ]
+      },
+      "counters": {
+        "rows": [
+          {
+            "role_key": "TOP",
+            "entries": [
+              {
+                "champion_id": 86,
+                "name": "Garen",
+                "delta_1": -6.5386,
+                "delta": -5.7007,
+                "matches": 197
+              },
+              {
+                "champion_id": 122,
+                "name": "Darius",
+                "delta_1": 5.1387,
+                "delta": 4.8376,
+                "matches": 128
+              },
+              {
+                "champion_id": 516,
+                "name": "Ornn",
+                "delta_1": -0.1642,
+                "delta": 1.4688,
+                "matches": 125
+              },
+              {
+                "champion_id": 58,
+                "name": "Renekton",
+                "delta_1": -6.0199,
+                "delta": -7.3565,
+                "matches": 113
+              },
+              {
+                "champion_id": 799,
+                "name": "Ambessa",
+                "delta_1": 0.0584,
+                "delta": -0.2966,
+                "matches": 106
+              },
+              {
+                "champion_id": 24,
+                "name": "Jax",
+                "delta_1": -4.9343,
+                "delta": -6.0286,
+                "matches": 105
+              },
+              {
+                "champion_id": 98,
+                "name": "Shen",
+                "delta_1": 3.2176,
+                "delta": 4.7544,
+                "matches": 104
+              },
+              {
+                "champion_id": 150,
+                "name": "Gnar",
+                "delta_1": 2.7689,
+                "delta": 1.0962,
+                "matches": 100
+              },
+              {
+                "champion_id": 54,
+                "name": "Malphite",
+                "delta_1": 6.4714,
+                "delta": 7.5364,
+                "matches": 97
+              },
+              {
+                "champion_id": 14,
+                "name": "Sion",
+                "delta_1": 4.0126,
+                "delta": 3.2535,
+                "matches": 93
+              },
+              {
+                "champion_id": 266,
+                "name": "Aatrox",
+                "delta_1": -9.2196,
+                "delta": -9.628,
+                "matches": 92
+              },
+              {
+                "champion_id": 777,
+                "name": "Yone",
+                "delta_1": 3.3908,
+                "delta": 3.1169,
+                "matches": 91
+              },
+              {
+                "champion_id": 39,
+                "name": "Irelia",
+                "delta_1": -1.3273,
+                "delta": -2.1032,
+                "matches": 90
+              },
+              {
+                "champion_id": 875,
+                "name": "Sett",
+                "delta_1": 9.4441,
+                "delta": 10.2247,
+                "matches": 87
+              },
+              {
+                "champion_id": 114,
+                "name": "Fiora",
+                "delta_1": -5.2518,
+                "delta": -5.3805,
+                "matches": 85
+              },
+              {
+                "champion_id": 157,
+                "name": "Yasuo",
+                "delta_1": 10.7423,
+                "delta": 9.4349,
+                "matches": 81
+              },
+              {
+                "champion_id": 82,
+                "name": "Mordekaiser",
+                "delta_1": 1.9753,
+                "delta": 2.4333,
+                "matches": 81
+              },
+              {
+                "champion_id": 164,
+                "name": "Camille",
+                "delta_1": -11.4717,
+                "delta": -10.0751,
+                "matches": 81
+              },
+              {
+                "champion_id": 904,
+                "name": "Zaahen",
+                "delta_1": 3.5299,
+                "delta": 3.7642,
+                "matches": 76
+              },
+              {
+                "champion_id": 92,
+                "name": "Riven",
+                "delta_1": 2.5472,
+                "delta": 2.7979,
+                "matches": 72
+              },
+              {
+                "champion_id": 67,
+                "name": "Vayne",
+                "delta_1": -3.4656,
+                "delta": -2.5549,
+                "matches": 71
+              },
+              {
+                "champion_id": 6,
+                "name": "Urgot",
+                "delta_1": -8.5203,
+                "delta": -8.3154,
+                "matches": 70
+              },
+              {
+                "champion_id": 897,
+                "name": "K'Sante",
+                "delta_1": 0.2918,
+                "delta": -3.3934,
+                "matches": 65
+              },
+              {
+                "champion_id": 2,
+                "name": "Olaf",
+                "delta_1": -2.2927,
+                "delta": -0.7603,
+                "matches": 63
+              },
+              {
+                "champion_id": 887,
+                "name": "Gwen",
+                "delta_1": -0.5716,
+                "delta": -0.7824,
+                "matches": 63
+              }
+            ]
+          },
+          {
+            "role_key": "JGL",
+            "entries": [
+              {
+                "champion_id": 104,
+                "name": "Graves",
+                "delta_1": -0.6221,
+                "delta": -0.7128,
+                "matches": 187
+              },
+              {
+                "champion_id": 59,
+                "name": "Jarvan IV",
+                "delta_1": 3.1357,
+                "delta": 3.9153,
+                "matches": 155
+              },
+              {
+                "champion_id": 234,
+                "name": "Viego",
+                "delta_1": -0.1919,
+                "delta": -1.316,
+                "matches": 154
+              },
+              {
+                "champion_id": 517,
+                "name": "Sylas",
+                "delta_1": 4.8759,
+                "delta": 3.9252,
+                "matches": 139
+              },
+              {
+                "champion_id": 91,
+                "name": "Talon",
+                "delta_1": 2.7493,
+                "delta": 3.5367,
+                "matches": 132
+              },
+              {
+                "champion_id": 56,
+                "name": "Nocturne",
+                "delta_1": -4.2779,
+                "delta": -3.3698,
+                "matches": 131
+              },
+              {
+                "champion_id": 64,
+                "name": "Lee Sin",
+                "delta_1": 4.9731,
+                "delta": 3.8698,
+                "matches": 129
+              },
+              {
+                "champion_id": 107,
+                "name": "Rengar",
+                "delta_1": 7.9153,
+                "delta": 7.4387,
+                "matches": 117
+              },
+              {
+                "champion_id": 102,
+                "name": "Shyvana",
+                "delta_1": -1.6191,
+                "delta": -4.7838,
+                "matches": 117
+              },
+              {
+                "champion_id": 131,
+                "name": "Diana",
+                "delta_1": 6.9301,
+                "delta": 7.4806,
+                "matches": 108
+              },
+              {
+                "champion_id": 121,
+                "name": "Kha'Zix",
+                "delta_1": -1.4444,
+                "delta": -1.3498,
+                "matches": 108
+              },
+              {
+                "champion_id": 245,
+                "name": "Ekko",
+                "delta_1": -10.6291,
+                "delta": -11.2992,
+                "matches": 108
+              },
+              {
+                "champion_id": 950,
+                "name": "Naafiri",
+                "delta_1": 2.3535,
+                "delta": 3.8911,
+                "matches": 101
+              },
+              {
+                "champion_id": 36,
+                "name": "Dr. Mundo",
+                "delta_1": -13.8958,
+                "delta": -13.8905,
+                "matches": 99
+              },
+              {
+                "champion_id": 35,
+                "name": "Shaco",
+                "delta_1": -6.4605,
+                "delta": -5.0816,
+                "matches": 94
+              },
+              {
+                "champion_id": 120,
+                "name": "Hecarim",
+                "delta_1": 2.3435,
+                "delta": 3.9028,
+                "matches": 89
+              },
+              {
+                "champion_id": 5,
+                "name": "Xin Zhao",
+                "delta_1": -5.1778,
+                "delta": -5.4157,
+                "matches": 89
+              },
+              {
+                "champion_id": 11,
+                "name": "Maestro Yi",
+                "delta_1": -12.0674,
+                "delta": -11.2749,
+                "matches": 89
+              },
+              {
+                "champion_id": 141,
+                "name": "Kayn",
+                "delta_1": 6.3366,
+                "delta": 5.752,
+                "matches": 88
+              },
+              {
+                "champion_id": 799,
+                "name": "Ambessa",
+                "delta_1": 7.6873,
+                "delta": 7.111,
+                "matches": 83
+              },
+              {
+                "champion_id": 233,
+                "name": "Briar",
+                "delta_1": -0.436,
+                "delta": 0.2599,
+                "matches": 78
+              },
+              {
+                "champion_id": 9,
+                "name": "Fiddlesticks",
+                "delta_1": -7.6059,
+                "delta": -5.9569,
+                "matches": 71
+              },
+              {
+                "champion_id": 254,
+                "name": "Vi",
+                "delta_1": 6.397,
+                "delta": 5.3751,
+                "matches": 69
+              },
+              {
+                "champion_id": 20,
+                "name": "Nunu y Willump",
+                "delta_1": -10.7746,
+                "delta": -9.6544,
+                "matches": 61
+              },
+              {
+                "champion_id": 238,
+                "name": "Zed",
+                "delta_1": -1.2028,
+                "delta": -1.8002,
+                "matches": 54
+              }
+            ]
+          },
+          {
+            "role_key": "MID",
+            "entries": [
+              {
+                "champion_id": 103,
+                "name": "Ahri",
+                "delta_1": -2.6062,
+                "delta": -1.4606,
+                "matches": 282
+              },
+              {
+                "champion_id": 157,
+                "name": "Yasuo",
+                "delta_1": 4.3409,
+                "delta": 4.3101,
+                "matches": 238
+              },
+              {
+                "champion_id": 55,
+                "name": "Katarina",
+                "delta_1": 2.6435,
+                "delta": 3.1868,
+                "matches": 212
+              },
+              {
+                "champion_id": 7,
+                "name": "LeBlanc",
+                "delta_1": 1.5949,
+                "delta": 1.7117,
+                "matches": 178
+              },
+              {
+                "champion_id": 84,
+                "name": "Akali",
+                "delta_1": 4.1208,
+                "delta": 3.862,
+                "matches": 167
+              },
+              {
+                "champion_id": 134,
+                "name": "Syndra",
+                "delta_1": -6.5086,
+                "delta": -6.44,
+                "matches": 145
+              },
+              {
+                "champion_id": 238,
+                "name": "Zed",
+                "delta_1": -5.2003,
+                "delta": -5.2393,
+                "matches": 143
+              },
+              {
+                "champion_id": 517,
+                "name": "Sylas",
+                "delta_1": 14.8117,
+                "delta": 14.6821,
+                "matches": 141
+              },
+              {
+                "champion_id": 112,
+                "name": "Viktor",
+                "delta_1": -8.9153,
+                "delta": -8.5247,
+                "matches": 120
+              },
+              {
+                "champion_id": 101,
+                "name": "Xerath",
+                "delta_1": -7.7644,
+                "delta": -6.6457,
+                "matches": 105
+              },
+              {
+                "champion_id": 166,
+                "name": "Akshan",
+                "delta_1": -9.4462,
+                "delta": -8.1079,
+                "matches": 102
+              },
+              {
+                "champion_id": 245,
+                "name": "Ekko",
+                "delta_1": -4.9029,
+                "delta": -4.9972,
+                "matches": 97
+              },
+              {
+                "champion_id": 893,
+                "name": "Aurora",
+                "delta_1": -4.632,
+                "delta": -5.9312,
+                "matches": 92
+              },
+              {
+                "champion_id": 61,
+                "name": "Orianna",
+                "delta_1": 9.9069,
+                "delta": 8.0218,
+                "matches": 88
+              },
+              {
+                "champion_id": 777,
+                "name": "Yone",
+                "delta_1": 8.2611,
+                "delta": 7.4191,
+                "matches": 87
+              },
+              {
+                "champion_id": 800,
+                "name": "Mel",
+                "delta_1": -3.1132,
+                "delta": -5.2738,
+                "matches": 87
+              },
+              {
+                "champion_id": 246,
+                "name": "Qiyana",
+                "delta_1": 11.9042,
+                "delta": 12.9303,
+                "matches": 74
+              },
+              {
+                "champion_id": 45,
+                "name": "Veigar",
+                "delta_1": -2.0638,
+                "delta": -2.3745,
+                "matches": 73
+              },
+              {
+                "champion_id": 105,
+                "name": "Fizz",
+                "delta_1": 0.6635,
+                "delta": 1.9699,
+                "matches": 71
+              },
+              {
+                "champion_id": 90,
+                "name": "Malzahar",
+                "delta_1": -8.2624,
+                "delta": -9.3383,
+                "matches": 71
+              },
+              {
+                "champion_id": 142,
+                "name": "Zoe",
+                "delta_1": -7.4909,
+                "delta": -6.6136,
+                "matches": 69
+              },
+              {
+                "champion_id": 127,
+                "name": "Lissandra",
+                "delta_1": 0.108,
+                "delta": 0.6661,
+                "matches": 66
+              },
+              {
+                "champion_id": 4,
+                "name": "Twisted Fate",
+                "delta_1": -2.0114,
+                "delta": -0.2854,
+                "matches": 63
+              },
+              {
+                "champion_id": 34,
+                "name": "Anivia",
+                "delta_1": 8.9945,
+                "delta": 10.2136,
+                "matches": 58
+              },
+              {
+                "champion_id": 910,
+                "name": "Hwei",
+                "delta_1": -4.8345,
+                "delta": -5.0822,
+                "matches": 58
+              }
+            ]
+          },
+          {
+            "role_key": "ADC",
+            "entries": [
+              {
+                "champion_id": 81,
+                "name": "Ezreal",
+                "delta_1": 5.0047,
+                "delta": 2.5255,
+                "matches": 305
+              },
+              {
+                "champion_id": 145,
+                "name": "Kai'Sa",
+                "delta_1": 2.1546,
+                "delta": 0.1562,
+                "matches": 255
+              },
+              {
+                "champion_id": 222,
+                "name": "Jinx",
+                "delta_1": 2.7575,
+                "delta": 3.527,
+                "matches": 251
+              },
+              {
+                "champion_id": 202,
+                "name": "Jhin",
+                "delta_1": -3.3819,
+                "delta": -3.2391,
+                "matches": 251
+              },
+              {
+                "champion_id": 22,
+                "name": "Ashe",
+                "delta_1": -4.4419,
+                "delta": -2.1727,
+                "matches": 249
+              },
+              {
+                "champion_id": 51,
+                "name": "Caitlyn",
+                "delta_1": 5.4019,
+                "delta": 4.6304,
+                "matches": 242
+              },
+              {
+                "champion_id": 804,
+                "name": "Yunara",
+                "delta_1": -4.2116,
+                "delta": -5.4936,
+                "matches": 209
+              },
+              {
+                "champion_id": 901,
+                "name": "Smolder",
+                "delta_1": 0.5673,
+                "delta": 0.4978,
+                "matches": 177
+              },
+              {
+                "champion_id": 21,
+                "name": "Miss Fortune",
+                "delta_1": -6.5526,
+                "delta": -5.8563,
+                "matches": 133
+              },
+              {
+                "champion_id": 42,
+                "name": "Corki",
+                "delta_1": 6.0442,
+                "delta": 4.6892,
+                "matches": 124
+              },
+              {
+                "champion_id": 67,
+                "name": "Vayne",
+                "delta_1": 2.1429,
+                "delta": 2.4543,
+                "matches": 117
+              },
+              {
+                "champion_id": 360,
+                "name": "Samira",
+                "delta_1": 5.5708,
+                "delta": 6.4891,
+                "matches": 105
+              },
+              {
+                "champion_id": 119,
+                "name": "Draven",
+                "delta_1": -6.3882,
+                "delta": -6.3515,
+                "matches": 103
+              },
+              {
+                "champion_id": 18,
+                "name": "Tristana",
+                "delta_1": 2.4388,
+                "delta": 3.4665,
+                "matches": 95
+              },
+              {
+                "champion_id": 29,
+                "name": "Twitch",
+                "delta_1": -4.6711,
+                "delta": -3.8575,
+                "matches": 93
+              },
+              {
+                "champion_id": 523,
+                "name": "Aphelios",
+                "delta_1": -0.0909,
+                "delta": -1.0585,
+                "matches": 92
+              },
+              {
+                "champion_id": 498,
+                "name": "Xayah",
+                "delta_1": 3.0326,
+                "delta": 4.9739,
+                "matches": 89
+              },
+              {
+                "champion_id": 15,
+                "name": "Sivir",
+                "delta_1": -0.0215,
+                "delta": -0.4551,
+                "matches": 84
+              },
+              {
+                "champion_id": 236,
+                "name": "Lucian",
+                "delta_1": -4.3357,
+                "delta": -5.2011,
+                "matches": 82
+              },
+              {
+                "champion_id": 110,
+                "name": "Varus",
+                "delta_1": 2.2132,
+                "delta": 0.642,
+                "matches": 76
+              },
+              {
+                "champion_id": 235,
+                "name": "Senna",
+                "delta_1": -1.4768,
+                "delta": 0.5934,
+                "matches": 68
+              },
+              {
+                "champion_id": 157,
+                "name": "Yasuo",
+                "delta_1": -4.4566,
+                "delta": -2.286,
+                "matches": 58
+              },
+              {
+                "champion_id": 221,
+                "name": "Zeri",
+                "delta_1": -7.9232,
+                "delta": -9.0984,
+                "matches": 57
+              },
+              {
+                "champion_id": 96,
+                "name": "Kog'Maw",
+                "delta_1": -5.9081,
+                "delta": -3.9831,
+                "matches": 48
+              },
+              {
+                "champion_id": 429,
+                "name": "Kalista",
+                "delta_1": 6.9168,
+                "delta": 4.452,
+                "matches": 41
+              }
+            ]
+          },
+          {
+            "role_key": "SUP",
+            "entries": [
+              {
+                "champion_id": 267,
+                "name": "Nami",
+                "delta_1": -3.3535,
+                "delta": -2.5813,
+                "matches": 417
+              },
+              {
+                "champion_id": 412,
+                "name": "Thresh",
+                "delta_1": 0.0426,
+                "delta": 0.9709,
+                "matches": 261
+              },
+              {
+                "champion_id": 43,
+                "name": "Karma",
+                "delta_1": 0.1619,
+                "delta": 0.652,
+                "matches": 215
+              },
+              {
+                "champion_id": 111,
+                "name": "Nautilus",
+                "delta_1": 8.0493,
+                "delta": 7.7608,
+                "matches": 213
+              },
+              {
+                "champion_id": 117,
+                "name": "Lulu",
+                "delta_1": -3.7119,
+                "delta": -3.6382,
+                "matches": 196
+              },
+              {
+                "champion_id": 432,
+                "name": "Bardo",
+                "delta_1": -1.0679,
+                "delta": 0.0687,
+                "matches": 149
+              },
+              {
+                "champion_id": 201,
+                "name": "Braum",
+                "delta_1": -2.3088,
+                "delta": -1.123,
+                "matches": 149
+              },
+              {
+                "champion_id": 497,
+                "name": "Rakan",
+                "delta_1": -1.1124,
+                "delta": -0.3258,
+                "matches": 131
+              },
+              {
+                "champion_id": 902,
+                "name": "Milio",
+                "delta_1": 1.3348,
+                "delta": 2.1061,
+                "matches": 123
+              },
+              {
+                "champion_id": 147,
+                "name": "Seraphine",
+                "delta_1": -3.3746,
+                "delta": -1.5833,
+                "matches": 114
+              },
+              {
+                "champion_id": 40,
+                "name": "Janna",
+                "delta_1": -1.9631,
+                "delta": -0.5755,
+                "matches": 112
+              },
+              {
+                "champion_id": 37,
+                "name": "Sona",
+                "delta_1": -5.2263,
+                "delta": -4.0652,
+                "matches": 108
+              },
+              {
+                "champion_id": 89,
+                "name": "Leona",
+                "delta_1": -7.5675,
+                "delta": -6.9941,
+                "matches": 107
+              },
+              {
+                "champion_id": 555,
+                "name": "Pyke",
+                "delta_1": 3.3942,
+                "delta": 2.3032,
+                "matches": 106
+              },
+              {
+                "champion_id": 235,
+                "name": "Senna",
+                "delta_1": 4.7217,
+                "delta": 4.4351,
+                "matches": 105
+              },
+              {
+                "champion_id": 12,
+                "name": "Alistar",
+                "delta_1": -2.9103,
+                "delta": -2.7295,
+                "matches": 101
+              },
+              {
+                "champion_id": 526,
+                "name": "Rell",
+                "delta_1": 1.3114,
+                "delta": 2.2719,
+                "matches": 86
+              },
+              {
+                "champion_id": 16,
+                "name": "Soraka",
+                "delta_1": 0.89,
+                "delta": 2.8689,
+                "matches": 82
+              },
+              {
+                "champion_id": 26,
+                "name": "Zilean",
+                "delta_1": -6.0421,
+                "delta": -4.1444,
+                "matches": 81
+              },
+              {
+                "champion_id": 350,
+                "name": "Yuumi",
+                "delta_1": -12.4184,
+                "delta": -15.4409,
+                "matches": 79
+              },
+              {
+                "champion_id": 53,
+                "name": "Blitzcrank",
+                "delta_1": 8.1873,
+                "delta": 8.0736,
+                "matches": 77
+              },
+              {
+                "champion_id": 161,
+                "name": "Vel'Koz",
+                "delta_1": 1.828,
+                "delta": 1.9822,
+                "matches": 60
+              },
+              {
+                "champion_id": 99,
+                "name": "Lux",
+                "delta_1": 12.962,
+                "delta": 9.3588,
+                "matches": 50
+              },
+              {
+                "champion_id": 143,
+                "name": "Zyra",
+                "delta_1": 5.6581,
+                "delta": 4.8415,
+                "matches": 47
+              },
+              {
+                "champion_id": 518,
+                "name": "Neeko",
+                "delta_1": -5.0141,
+                "delta": -7.9402,
+                "matches": 46
+              }
+            ]
+          }
+        ]
+      },
+      "runes": {
+        "has_data": true,
+        "popular": {
+          "rune_build_id": 67,
+          "matches": 1741,
+          "delta": -1.44,
+          "primary_style": 8100,
+          "sub_style": 8200,
+          "primary_runes": [
+            8112,
+            8139,
+            8140,
+            8106
+          ],
+          "secondary_runes": [
+            8226,
+            8210
+          ],
+          "stat_shards": [
+            5005,
+            5008,
+            5001
+          ]
+        },
+        "highest_delta": {
+          "rune_build_id": 856,
+          "matches": 1,
+          "delta": 56.23,
+          "primary_style": 8100,
+          "sub_style": 8200,
+          "primary_runes": [
+            8112,
+            8143,
+            8140,
+            8106
+          ],
+          "secondary_runes": [
+            8226,
+            8237
+          ],
+          "stat_shards": [
+            5008,
+            5008,
+            5011
+          ]
+        },
+        "highest_delta_min_matches": 1
+      },
+      "items": {
+        "has_data": true,
+        "first_buy": {
+          "combos": [
+            {
+              "items": [
+                {
+                  "item_id": 1056,
+                  "item_name": "Anillo de Doran"
+                },
+                {
+                  "item_id": 2003,
+                  "item_name": "Poción de vida"
+                }
+              ],
+              "delta": -1.02,
+              "matches": 1541
+            },
+            {
+              "items": [
+                {
+                  "item_id": 1056,
+                  "item_name": "Anillo de Doran"
+                },
+                {
+                  "item_id": 2003,
+                  "item_name": "Poción de vida"
+                },
+                {
+                  "item_id": 3340,
+                  "item_name": "Guardián invisible"
+                }
+              ],
+              "delta": 1.45,
+              "matches": 1491
+            },
+            {
+              "items": [
+                {
+                  "item_id": 1056,
+                  "item_name": "Anillo de Doran"
+                },
+                {
+                  "item_id": 2003,
+                  "item_name": "Poción de vida"
+                },
+                {
+                  "item_id": 2003,
+                  "item_name": "Poción de vida"
+                },
+                {
+                  "item_id": 3340,
+                  "item_name": "Guardián invisible"
+                }
+              ],
+              "delta": -0.61,
+              "matches": 497
+            }
+          ],
+          "min_matches_for_best_delta": 1
+        },
+        "first_recall_buy": {
+          "combos": [
+            {
+              "items": [
+                {
+                  "item_id": 1027,
+                  "item_name": "Cristal de zafiro"
+                },
+                {
+                  "item_id": 1052,
+                  "item_name": "Tomo amplificador"
+                }
+              ],
+              "delta": -3.01,
+              "matches": 265
+            },
+            {
+              "items": [
+                {
+                  "item_id": 3802,
+                  "item_name": "Capítulo perdido"
+                }
+              ],
+              "delta": 4.98,
+              "matches": 245
+            },
+            {
+              "items": [
+                {
+                  "item_id": 1052,
+                  "item_name": "Tomo amplificador"
+                }
+              ],
+              "delta": -3.17,
+              "matches": 233
+            }
+          ],
+          "min_matches_for_best_delta": 1
+        },
+        "core_build_paths": {
+          "paths": [
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                }
+              ],
+              "delta": 1.4,
+              "matches": 1573
+            },
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa"
+                }
+              ],
+              "delta": 2.07,
+              "matches": 318
+            },
+            {
+              "items": [
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                }
+              ],
+              "delta": -0.92,
+              "matches": 259
+            },
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya"
+                }
+              ],
+              "delta": -1.74,
+              "matches": 173
+            },
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                }
+              ],
+              "delta": -5.97,
+              "matches": 116
+            },
+            {
+              "items": [
+                {
+                  "item_id": 2503,
+                  "item_name": "Antorcha de fuego negro"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                }
+              ],
+              "delta": 0.98,
+              "matches": 87
+            },
+            {
+              "items": [
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa"
+                }
+              ],
+              "delta": 0.57,
+              "matches": 53
+            },
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 3111,
+                  "item_name": "Botas de mercurio"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                }
+              ],
+              "delta": -7.94,
+              "matches": 49
+            },
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                }
+              ],
+              "delta": 0.86,
+              "matches": 42
+            },
+            {
+              "items": [
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya"
+                }
+              ],
+              "delta": -1.96,
+              "matches": 40
+            },
+            {
+              "items": [
+                {
+                  "item_id": 3118,
+                  "item_name": "Malignidad"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                }
+              ],
+              "delta": 0.32,
+              "matches": 33
+            },
+            {
+              "items": [
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                }
+              ],
+              "delta": 6.34,
+              "matches": 23
+            },
+            {
+              "items": [
+                {
+                  "item_id": 2503,
+                  "item_name": "Antorcha de fuego negro"
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero"
+                },
+                {
+                  "item_id": 6653,
+                  "item_name": "Tormento de Liandry"
+                }
+              ],
+              "delta": -15.97,
+              "matches": 23
+            },
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 3158,
+                  "item_name": "Botas jonias de la lucidez"
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría"
+                }
+              ],
+              "delta": 18.5,
+              "matches": 20
+            },
+            {
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden"
+                },
+                {
+                  "item_id": 3047,
+                  "item_name": "Botas blindadas"
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya"
+                }
+              ],
+              "delta": -1.68,
+              "matches": 20
+            }
+          ],
+          "min_matches": 1,
+          "limit": 15
+        },
+        "core_items": {
+          "rows": [
+            {
+              "order": 1,
+              "items": [
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden",
+                  "delta": 0.09,
+                  "matches": 2746
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero",
+                  "delta": 0.56,
+                  "matches": 468
+                },
+                {
+                  "item_id": 2503,
+                  "item_name": "Antorcha de fuego negro",
+                  "delta": 1.05,
+                  "matches": 307
+                },
+                {
+                  "item_id": 3118,
+                  "item_name": "Malignidad",
+                  "delta": -5.3,
+                  "matches": 60
+                },
+                {
+                  "item_id": 3158,
+                  "item_name": "Botas jonias de la lucidez",
+                  "delta": 11.99,
+                  "matches": 49
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa",
+                  "delta": -3.07,
+                  "matches": 38
+                },
+                {
+                  "item_id": 3111,
+                  "item_name": "Botas de mercurio",
+                  "delta": -14.99,
+                  "matches": 33
+                },
+                {
+                  "item_id": 6657,
+                  "item_name": "Vara de las edades",
+                  "delta": 20.07,
+                  "matches": 11
+                },
+                {
+                  "item_id": 3047,
+                  "item_name": "Botas blindadas",
+                  "delta": -17.65,
+                  "matches": 9
+                },
+                {
+                  "item_id": 3152,
+                  "item_name": "Cintomisil hextech",
+                  "delta": -32.09,
+                  "matches": 6
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría",
+                  "delta": -26.96,
+                  "matches": 4
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya",
+                  "delta": 14.15,
+                  "matches": 3
+                },
+                {
+                  "item_id": 3003,
+                  "item_name": "Bastón del arcángel",
+                  "delta": -18.94,
+                  "matches": 3
+                },
+                {
+                  "item_id": 3100,
+                  "item_name": "Perdición del liche",
+                  "delta": 48.98,
+                  "matches": 1
+                },
+                {
+                  "item_id": 6653,
+                  "item_name": "Tormento de Liandry",
+                  "delta": 46.91,
+                  "matches": 1
+                }
+              ]
+            },
+            {
+              "order": 2,
+              "items": [
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero",
+                  "delta": 0.5,
+                  "matches": 2561
+                },
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden",
+                  "delta": -0.66,
+                  "matches": 460
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría",
+                  "delta": -6.75,
+                  "matches": 149
+                },
+                {
+                  "item_id": 3111,
+                  "item_name": "Botas de mercurio",
+                  "delta": -0.58,
+                  "matches": 147
+                },
+                {
+                  "item_id": 3158,
+                  "item_name": "Botas jonias de la lucidez",
+                  "delta": 8.51,
+                  "matches": 124
+                },
+                {
+                  "item_id": 2503,
+                  "item_name": "Antorcha de fuego negro",
+                  "delta": 1.39,
+                  "matches": 72
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa",
+                  "delta": -1.75,
+                  "matches": 66
+                },
+                {
+                  "item_id": 3047,
+                  "item_name": "Botas blindadas",
+                  "delta": 2.8,
+                  "matches": 53
+                },
+                {
+                  "item_id": 3009,
+                  "item_name": "Botas de rapidez",
+                  "delta": 12.44,
+                  "matches": 14
+                },
+                {
+                  "item_id": 3118,
+                  "item_name": "Malignidad",
+                  "delta": 11.71,
+                  "matches": 14
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya",
+                  "delta": 18.67,
+                  "matches": 13
+                },
+                {
+                  "item_id": 3175,
+                  "item_name": "Botas del lanzahechizos",
+                  "delta": -19.06,
+                  "matches": 3
+                },
+                {
+                  "item_id": 3174,
+                  "item_name": "Avance blindado",
+                  "delta": -2.24,
+                  "matches": 2
+                },
+                {
+                  "item_id": 3173,
+                  "item_name": "Trituradoras encadenadas",
+                  "delta": 49.36,
+                  "matches": 1
+                },
+                {
+                  "item_id": 3137,
+                  "item_name": "Florescencia sepulcral",
+                  "delta": 48.98,
+                  "matches": 1
+                }
+              ]
+            },
+            {
+              "order": 3,
+              "items": [
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría",
+                  "delta": 1.1,
+                  "matches": 2164
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa",
+                  "delta": 2.18,
+                  "matches": 438
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya",
+                  "delta": -0.63,
+                  "matches": 318
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero",
+                  "delta": -4.53,
+                  "matches": 189
+                },
+                {
+                  "item_id": 6653,
+                  "item_name": "Tormento de Liandry",
+                  "delta": -1.67,
+                  "matches": 67
+                },
+                {
+                  "item_id": 4629,
+                  "item_name": "Impulso cósmico",
+                  "delta": 1.17,
+                  "matches": 46
+                },
+                {
+                  "item_id": 3152,
+                  "item_name": "Cintomisil hextech",
+                  "delta": 16.94,
+                  "matches": 27
+                },
+                {
+                  "item_id": 3137,
+                  "item_name": "Florescencia sepulcral",
+                  "delta": 25.43,
+                  "matches": 21
+                },
+                {
+                  "item_id": 3102,
+                  "item_name": "Velo del hada de la muerte",
+                  "delta": -7.5,
+                  "matches": 18
+                },
+                {
+                  "item_id": 3135,
+                  "item_name": "Bastón del Vacío",
+                  "delta": 15.78,
+                  "matches": 15
+                },
+                {
+                  "item_id": 3111,
+                  "item_name": "Botas de mercurio",
+                  "delta": 25.11,
+                  "matches": 13
+                },
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden",
+                  "delta": 12.12,
+                  "matches": 13
+                },
+                {
+                  "item_id": 4628,
+                  "item_name": "Precisión infalible",
+                  "delta": -1.07,
+                  "matches": 12
+                },
+                {
+                  "item_id": 3158,
+                  "item_name": "Botas jonias de la lucidez",
+                  "delta": 19.81,
+                  "matches": 7
+                },
+                {
+                  "item_id": 3003,
+                  "item_name": "Bastón del arcángel",
+                  "delta": -12.82,
+                  "matches": 5
+                }
+              ]
+            },
+            {
+              "order": 4,
+              "items": [
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya",
+                  "delta": 3.76,
+                  "matches": 1094
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría",
+                  "delta": 4.76,
+                  "matches": 300
+                },
+                {
+                  "item_id": 3135,
+                  "item_name": "Bastón del Vacío",
+                  "delta": 2.65,
+                  "matches": 162
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa",
+                  "delta": 4.45,
+                  "matches": 120
+                },
+                {
+                  "item_id": 3137,
+                  "item_name": "Florescencia sepulcral",
+                  "delta": 11.88,
+                  "matches": 42
+                },
+                {
+                  "item_id": 3102,
+                  "item_name": "Velo del hada de la muerte",
+                  "delta": -6.96,
+                  "matches": 38
+                },
+                {
+                  "item_id": 6653,
+                  "item_name": "Tormento de Liandry",
+                  "delta": -7.11,
+                  "matches": 18
+                },
+                {
+                  "item_id": 8010,
+                  "item_name": "Maldición sanguinolenta",
+                  "delta": 9.63,
+                  "matches": 15
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero",
+                  "delta": -16.71,
+                  "matches": 14
+                },
+                {
+                  "item_id": 3165,
+                  "item_name": "Morellonomicón",
+                  "delta": -17.97,
+                  "matches": 12
+                },
+                {
+                  "item_id": 4629,
+                  "item_name": "Impulso cósmico",
+                  "delta": 28.16,
+                  "matches": 5
+                },
+                {
+                  "item_id": 6655,
+                  "item_name": "Eco de Luden",
+                  "delta": 22.34,
+                  "matches": 4
+                },
+                {
+                  "item_id": 3152,
+                  "item_name": "Cintomisil hextech",
+                  "delta": 46.79,
+                  "matches": 3
+                },
+                {
+                  "item_id": 3009,
+                  "item_name": "Botas de rapidez",
+                  "delta": -48.43,
+                  "matches": 2
+                },
+                {
+                  "item_id": 3118,
+                  "item_name": "Malignidad",
+                  "delta": -52.06,
+                  "matches": 2
+                }
+              ]
+            },
+            {
+              "order": 5,
+              "items": [
+                {
+                  "item_id": 3135,
+                  "item_name": "Bastón del Vacío",
+                  "delta": 2.14,
+                  "matches": 73
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya",
+                  "delta": -0.84,
+                  "matches": 63
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa",
+                  "delta": 27.11,
+                  "matches": 42
+                },
+                {
+                  "item_id": 3102,
+                  "item_name": "Velo del hada de la muerte",
+                  "delta": -10.86,
+                  "matches": 25
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría",
+                  "delta": -3.58,
+                  "matches": 21
+                },
+                {
+                  "item_id": 3137,
+                  "item_name": "Florescencia sepulcral",
+                  "delta": 17.04,
+                  "matches": 19
+                },
+                {
+                  "item_id": 3165,
+                  "item_name": "Morellonomicón",
+                  "delta": -14.65,
+                  "matches": 8
+                },
+                {
+                  "item_id": 6653,
+                  "item_name": "Tormento de Liandry",
+                  "delta": 52.8,
+                  "matches": 2
+                },
+                {
+                  "item_id": 8020,
+                  "item_name": "Máscara abisal",
+                  "delta": -1.02,
+                  "matches": 2
+                },
+                {
+                  "item_id": 4629,
+                  "item_name": "Impulso cósmico",
+                  "delta": -50.83,
+                  "matches": 2
+                },
+                {
+                  "item_id": 3143,
+                  "item_name": "Presagio de Randuin",
+                  "delta": -51.02,
+                  "matches": 2
+                },
+                {
+                  "item_id": 3152,
+                  "item_name": "Cintomisil hextech",
+                  "delta": 49.36,
+                  "matches": 1
+                },
+                {
+                  "item_id": 4633,
+                  "item_name": "Creagrietas",
+                  "delta": 49.36,
+                  "matches": 1
+                },
+                {
+                  "item_id": 3020,
+                  "item_name": "Botas de hechicero",
+                  "delta": 48.98,
+                  "matches": 1
+                },
+                {
+                  "item_id": 2503,
+                  "item_name": "Antorcha de fuego negro",
+                  "delta": 46.55,
+                  "matches": 1
+                }
+              ]
+            },
+            {
+              "order": 6,
+              "items": [
+                {
+                  "item_id": 3135,
+                  "item_name": "Bastón del Vacío",
+                  "delta": 14.96,
+                  "matches": 3
+                },
+                {
+                  "item_id": 3157,
+                  "item_name": "Reloj de arena de Zhonya",
+                  "delta": 13.46,
+                  "matches": 3
+                },
+                {
+                  "item_id": 3137,
+                  "item_name": "Florescencia sepulcral",
+                  "delta": -0.83,
+                  "matches": 2
+                },
+                {
+                  "item_id": 4646,
+                  "item_name": "Sobrecarga tormentosa",
+                  "delta": -1.02,
+                  "matches": 2
+                },
+                {
+                  "item_id": 3102,
+                  "item_name": "Velo del hada de la muerte",
+                  "delta": -1.02,
+                  "matches": 2
+                },
+                {
+                  "item_id": 3165,
+                  "item_name": "Morellonomicón",
+                  "delta": 49.36,
+                  "matches": 1
+                },
+                {
+                  "item_id": 4629,
+                  "item_name": "Impulso cósmico",
+                  "delta": 48.98,
+                  "matches": 1
+                },
+                {
+                  "item_id": 3118,
+                  "item_name": "Malignidad",
+                  "delta": 46.91,
+                  "matches": 1
+                },
+                {
+                  "item_id": 4645,
+                  "item_name": "Llamasombría",
+                  "delta": -51.02,
+                  "matches": 1
+                },
+                {
+                  "item_id": 2510,
+                  "item_name": "Amanecer y anochecer",
+                  "delta": -53.45,
+                  "matches": 1
+                },
+                {
+                  "item_id": 6676,
+                  "item_name": "Recaudadora",
+                  "delta": -53.45,
+                  "matches": 1
+                }
+              ]
+            }
+          ],
+          "min_matches": 1,
+          "limit": 15
+        }
+      }
+    }
+  },
+  "generated_at_utc": "2026-04-10T19:08:55.793100+00:00"
+}
