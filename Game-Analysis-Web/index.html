@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTP - Game Analysis Web</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <div>
+                <div class="site-brand">BestTrickPony</div>
+                <h1 id="site-title" class="site-title">Game Analysis</h1>
+            </div>
+        </header>
+
+        <main class="site-main">
+            <section id="analysis-view" class="view-section">
+                <div id="analysis-subtitle" class="analysis-subtitle">Cargando datos...</div>
+
+                <div class="analysis-toolbar">
+                    <div class="analysis-toolbar-main">
+                        <input id="analysis-search-input" class="search-input" type="text" placeholder="Buscar campeon...">
+                        <div id="role-filters" class="role-filters"></div>
+                    </div>
+
+                    <div class="locked-filter-row">
+                        <div class="locked-filter-card">
+                            <div class="locked-filter-head">
+                                <span>Parches</span>
+                                <span id="analysis-patches-help" class="context-help" tabindex="0" data-help-text="">?</span>
+                            </div>
+                            <div id="analysis-patches-summary" class="locked-filter-value">Todos los parches</div>
+                        </div>
+
+                        <div class="locked-filter-card">
+                            <div class="locked-filter-head">
+                                <span>Rangos</span>
+                                <span id="analysis-ranks-help" class="context-help" tabindex="0" data-help-text="">?</span>
+                            </div>
+                            <div id="analysis-ranks-summary" class="locked-filter-value">Todos los rangos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="analysis-table">
+                        <thead>
+                            <tr>
+                                <th><button type="button" class="sort-btn" data-sort-key="champion_name">Champ</button></th>
+                                <th><button type="button" class="sort-btn" data-sort-key="tier">Tier</button></th>
+                                <th><button type="button" class="sort-btn" data-sort-key="role_key">Rol</button></th>
+                                <th><button type="button" class="sort-btn" data-sort-key="win_rate">Win Rate</button></th>
+                                <th><button type="button" class="sort-btn" data-sort-key="pick_rate">Pick Rate</button></th>
+                                <th><button type="button" class="sort-btn" data-sort-key="ban_rate">Ban Rate</button></th>
+                                <th>Débil Contra</th>
+                            </tr>
+                        </thead>
+                        <tbody id="analysis-table-body">
+                            <tr><td colspan="7" class="empty-state">Cargando datos...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button id="page-prev-10" type="button" class="ghost-btn">« 10</button>
+                    <button id="page-prev" type="button" class="ghost-btn">Anterior</button>
+                    <div id="page-indicator" class="page-indicator">1 / 1</div>
+                    <button id="page-next" type="button" class="ghost-btn">Siguiente</button>
+                    <button id="page-next-10" type="button" class="ghost-btn">10 »</button>
+                </div>
+            </section>
+
+            <section id="champion-view" class="view-section hidden">
+                <div class="champion-topbar">
+                    <button id="champion-back" type="button" class="ghost-btn">← Volver a Game Analysis</button>
+                </div>
+
+                <div class="champion-hero-card">
+                    <div class="champion-hero-main">
+                        <img id="champion-hero-image" class="champion-hero-image" alt="">
+                        <div>
+                            <h2 id="champion-hero-name" class="champion-hero-name"></h2>
+                            <div id="champion-locked-meta" class="champion-locked-meta"></div>
+                        </div>
+                    </div>
+                    <div class="champion-summary-grid">
+                        <div class="summary-pill"><span>WR</span><strong id="summary-win-rate">0%</strong></div>
+                        <div class="summary-pill"><span>PR</span><strong id="summary-pick-rate">0%</strong></div>
+                        <div class="summary-pill"><span>BR</span><strong id="summary-ban-rate">0%</strong></div>
+                        <div class="summary-pill"><span>Games</span><strong id="summary-games">0</strong></div>
+                    </div>
+                </div>
+
+                <div class="champion-role-row">
+                    <div id="champion-role-buttons" class="champion-role-buttons"></div>
+                </div>
+
+                <div class="champion-explainer-card">
+                    <p id="champion-explainer-text" class="champion-explainer-text"></p>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-card-head">
+                        <h3>Sinergias y Counters</h3>
+                        <div class="pill-toggle">
+                            <button id="toggle-synergies" type="button" class="pill-btn active">Sinergias</button>
+                            <button id="toggle-counters" type="button" class="pill-btn">Counters</button>
+                        </div>
+                    </div>
+                    <div id="matchups-container" class="matchups-container"></div>
+                </div>
+
+                <div class="items-grid">
+                    <div class="section-card">
+                        <h3>Primera compra</h3>
+                        <div id="first-buy-container" class="vertical-combos"></div>
+                    </div>
+                    <div class="section-card">
+                        <h3>First Recall Buy</h3>
+                        <div id="first-recall-container" class="vertical-combos"></div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h3>Core Build Path</h3>
+                    <div id="core-path-container" class="horizontal-scroll-row scrollbar-skin"></div>
+                </div>
+
+                <div class="section-card">
+                    <h3>Core Items</h3>
+                    <div id="core-items-container" class="core-items-container"></div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-card-head">
+                        <h3>Runas</h3>
+                        <div class="pill-toggle">
+                            <button id="toggle-runes-popular" type="button" class="pill-btn active">Más jugadas</button>
+                            <button id="toggle-runes-delta" type="button" class="pill-btn">Mayor delta</button>
+                        </div>
+                    </div>
+                    <div id="runes-container" class="runes-container"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="item-tooltip" class="item-tooltip hidden"></div>
+
+    <script src="./assets/champion-utils.js"></script>
+    <script src="./assets/app.js"></script>
+</body>
+</html>
