@@ -628,8 +628,34 @@ button, input { font: inherit; }
     border-radius: 999px;
 }
 
-@media (max-width: 1100px) {
-    .locked-filter-row { flex-wrap: wrap; }
+@media (max-width: 1250px) {
+    .analysis-toolbar-main {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .role-filters {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .locked-filter-row {
+        flex: 1 1 100%;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .locked-filter-card {
+        flex: 1 1 220px;
+        max-width: none;
+    }
 }
 
 @media (max-width: 900px) {

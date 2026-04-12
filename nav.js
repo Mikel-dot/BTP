@@ -1,6 +1,6 @@
 function initNavigation() {
     const nav = document.querySelector(".glass-nav");
-    const mobileBreakpoint = 1380;
+    const mobileBreakpoint = 1250;
 
     if (!nav || nav.dataset.navReady === "true") {
         return;
