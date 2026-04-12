@@ -1,45 +1,121 @@
-const ROLE_LABELS = {
-    ALL: "Todo",
-    TOP: "Top",
-    JGL: "Jungla",
-    MID: "Mid",
-    ADC: "ADC",
-    SUP: "Soporte"
+const LANGUAGE = document.documentElement.lang.toLowerCase().startsWith("en") ? "en" : "es";
+
+const UI_COPY = {
+    es: {
+        roleLabels: {
+            ALL: "Todo",
+            TOP: "Top",
+            JGL: "Jungla",
+            MID: "Mid",
+            ADC: "ADC",
+            SUP: "Soporte"
+        },
+        shardLabels: {
+            5001: "\u26e8\ufe0f Armadura",
+            5002: "\ud83e\ude84 Resistencia magica",
+            5003: "\u2764\ufe0f Vida",
+            5005: "\u2694\ufe0f Vel. ataque",
+            5007: "\ud83c\udfc3 Vel. movimiento",
+            5008: "\u2728 Fuerza adaptable",
+            5009: "\u23f1\ufe0f Aceleracion",
+            5010: "\u2764\ufe0f Vida escalable",
+            5011: "\ud83e\udea8 Tenacidad"
+        },
+        numberLocale: "es-ES",
+        ddragonLocale: "es_ES",
+        texts: {
+            filterLocked: "Aun solo hemos analizado {games} partidas entre todos los parches. Para mantener datos estadisticamente relevantes, por ahora no permitimos filtrar por rangos o parches, aunque la funcion ya esta desarrollada.",
+            allPatches: "Todos los parches",
+            allRanks: "Todos los rangos",
+            patchesCount: "{count} parches",
+            ranksCount: "{count} rangos",
+            gamesAnalyzed: "{games} partidas analizadas",
+            noChampions: "No hay campeones para mostrar con estos filtros.",
+            noData: "Sin datos suficientes.",
+            cannotOpenDirectly: "Esta version web no se puede abrir con doble clic directo. Sirvela por http o subela a GitHub Pages.",
+            cannotLoad: "No se pudo cargar la version web de Game Analysis.",
+            patchLoadWarn: "No se pudo cargar el parche visual mas reciente.",
+            analysisTitle: "Game Analysis",
+            championTitle: "Champion Analysis",
+            championMeta: "Parches: {patches} | Rangos: {ranks} | {games} partidas analizadas",
+            explainer: "El delta de abajo mide como cambia el rendimiento de {champion} cuando juega en {role} y aparece junto o enfrente de otro campeon en un rol concreto. En Sinergias, un delta positivo significa que {champion} suele rendir mejor junto al campeon indicado. En Counters, un delta positivo significa que {champion} suele rendir mejor versus el campeon indicado.",
+            gamesLabel: "Partidas",
+            deltaLabel: "Delta",
+            deltaOneLabel: "D1",
+            shards: "Fragmentos"
+        }
+    },
+    en: {
+        roleLabels: {
+            ALL: "All",
+            TOP: "Top",
+            JGL: "Jungle",
+            MID: "Mid",
+            ADC: "ADC",
+            SUP: "Support"
+        },
+        shardLabels: {
+            5001: "\u26e8\ufe0f Armor",
+            5002: "\ud83e\ude84 Magic resist",
+            5003: "\u2764\ufe0f Health",
+            5005: "\u2694\ufe0f Attack speed",
+            5007: "\ud83c\udfc3 Move speed",
+            5008: "\u2728 Adaptive force",
+            5009: "\u23f1\ufe0f Ability haste",
+            5010: "\u2764\ufe0f Scaling health",
+            5011: "\ud83e\udea8 Tenacity"
+        },
+        numberLocale: "en-US",
+        ddragonLocale: "en_US",
+        texts: {
+            filterLocked: "We have only analyzed {games} matches across all patches so far. To keep the data statistically meaningful, patch and rank filters are temporarily locked even though the feature is already built.",
+            allPatches: "All patches",
+            allRanks: "All ranks",
+            patchesCount: "{count} patches",
+            ranksCount: "{count} ranks",
+            gamesAnalyzed: "{games} matches analyzed",
+            noChampions: "No champions match the current filters.",
+            noData: "Not enough data.",
+            cannotOpenDirectly: "This web version cannot be opened with a direct double click. Serve it over http or upload it to GitHub Pages.",
+            cannotLoad: "Failed to load the Game Analysis web version.",
+            patchLoadWarn: "Could not load the latest visual patch.",
+            analysisTitle: "Game Analysis",
+            championTitle: "Champion Analysis",
+            championMeta: "Patches: {patches} | Ranks: {ranks} | {games} matches analyzed",
+            explainer: "The delta values below measure how {champion} performs when played as {role} alongside or against another champion in a specific role. In Synergies, a positive delta means {champion} usually performs better with that champion on the same team. In Counters, a positive delta means {champion} usually performs better against that champion.",
+            gamesLabel: "Games",
+            deltaLabel: "Delta",
+            deltaOneLabel: "D1",
+            shards: "Shards"
+        }
+    }
 };
 
+const UI = UI_COPY[LANGUAGE];
+const ROLE_LABELS = UI.roleLabels;
 const ROLE_ORDER = { TOP: 0, JGL: 1, MID: 2, ADC: 3, SUP: 4 };
-const SHARD_LABELS = {
-    5001: "\u26e8\ufe0f Armadura",
-    5002: "\ud83e\ude84 Resistencia magica",
-    5003: "\u2764\ufe0f Vida",
-    5005: "\u2694\ufe0f Vel. ataque",
-    5007: "\ud83c\udfc3 Vel. movimiento",
-    5008: "\u2728 Fuerza adaptable",
-    5009: "\u23f1\ufe0f Aceleracion",
-    5010: "\u2764\ufe0f Vida escalable",
-    5011: "\ud83e\udea8 Tenacidad"
-};
+const SHARD_LABELS = UI.shardLabels;
 
 const ITEM_STAT_MAP = {
-    FlatHPPoolMod: ["\u2764\ufe0f", "Vida"],
+    FlatHPPoolMod: ["\u2764\ufe0f", LANGUAGE === "en" ? "Health" : "Vida"],
     FlatMPPoolMod: ["\ud83d\udca7", "Mana"],
     FlatPhysicalDamageMod: ["\ud83d\udde1\ufe0f", "AD"],
     FlatMagicDamageMod: ["\u2728", "AP"],
-    FlatArmorMod: ["\ud83d\udee1\ufe0f", "Armadura"],
-    FlatSpellBlockMod: ["\ud83e\ude84", "Resistencia magica"],
-    PercentAttackSpeedMod: ["\u2694\ufe0f", "Vel. ataque"],
-    FlatMovementSpeedMod: ["\ud83c\udfc3", "Vel. movimiento"],
-    PercentMovementSpeedMod: ["\ud83c\udfc3", "Vel. movimiento"],
-    FlatCritChanceMod: ["\ud83c\udfaf", "Critico"],
-    FlatAbilityHasteMod: ["\u23f1\ufe0f", "Aceleracion"],
-    FlatHPRegenMod: ["\ud83d\udc9a", "Reg. vida"],
-    FlatMPRegenMod: ["\ud83d\udd37", "Reg. mana"],
-    PercentLifeStealMod: ["\ud83e\ude78", "Robo de vida"],
+    FlatArmorMod: ["\ud83d\udee1\ufe0f", LANGUAGE === "en" ? "Armor" : "Armadura"],
+    FlatSpellBlockMod: ["\ud83e\ude84", LANGUAGE === "en" ? "Magic resist" : "Resistencia magica"],
+    PercentAttackSpeedMod: ["\u2694\ufe0f", LANGUAGE === "en" ? "Attack speed" : "Vel. ataque"],
+    FlatMovementSpeedMod: ["\ud83c\udfc3", LANGUAGE === "en" ? "Move speed" : "Vel. movimiento"],
+    PercentMovementSpeedMod: ["\ud83c\udfc3", LANGUAGE === "en" ? "Move speed" : "Vel. movimiento"],
+    FlatCritChanceMod: ["\ud83c\udfaf", LANGUAGE === "en" ? "Critical strike" : "Critico"],
+    FlatAbilityHasteMod: ["\u23f1\ufe0f", LANGUAGE === "en" ? "Ability haste" : "Aceleracion"],
+    FlatHPRegenMod: ["\ud83d\udc9a", LANGUAGE === "en" ? "Health regen" : "Reg. vida"],
+    FlatMPRegenMod: ["\ud83d\udd37", LANGUAGE === "en" ? "Mana regen" : "Reg. mana"],
+    PercentLifeStealMod: ["\ud83e\ude78", LANGUAGE === "en" ? "Life steal" : "Robo de vida"],
     PercentOmnivampMod: ["\ud83e\ude78", "Omnivamp"],
-    PercentTenacityMod: ["\ud83e\udea8", "Tenacidad"]
+    PercentTenacityMod: ["\ud83e\udea8", LANGUAGE === "en" ? "Tenacity" : "Tenacidad"]
 };
 
-const FILTERS_LOCKED_TEXT = "Aun solo hemos analizado {games} partidas entre todos los parches. Para mantener datos estadisticamente relevantes, por ahora no permitimos filtrar por rangos o parches, aunque la funcion ya esta desarrollada.";
+const FILTERS_LOCKED_TEXT = UI.texts.filterLocked;
 
 const state = {
     latestPatch: "16.7.1",
@@ -71,8 +147,12 @@ function escapeHtml(value) {
         .replace(/'/g, "&#39;");
 }
 
+function translate(template, params = {}) {
+    return String(template || "").replace(/\{(\w+)\}/g, (_, key) => String(params[key] ?? ""));
+}
+
 function formatCount(value) {
-    return Number(value || 0).toLocaleString("es-ES");
+    return Number(value || 0).toLocaleString(UI.numberLocale);
 }
 
 function formatPercent(value) {
@@ -143,7 +223,7 @@ function compareRows(a, b, sortKey, sortDirection) {
     if (aValue > bValue) {
         return 1 * direction;
     }
-    return String(a.champion_name || "").localeCompare(String(b.champion_name || ""), "es");
+    return String(a.champion_name || "").localeCompare(String(b.champion_name || ""), UI.numberLocale);
 }
 
 async function initLatestPatch() {
@@ -154,7 +234,7 @@ async function initLatestPatch() {
             state.latestPatch = versions[0];
         }
     } catch (error) {
-        console.warn("No se pudo cargar el parche visual mas reciente.", error);
+        console.warn(UI.texts.patchLoadWarn, error);
     }
     window.gaWebChampionUtils.setPatch(state.latestPatch);
 }
@@ -177,15 +257,15 @@ function renderAnalysisHeader() {
     const subtitle = document.getElementById("analysis-subtitle");
     const patchesSummary = document.getElementById("analysis-patches-summary");
     const ranksSummary = document.getElementById("analysis-ranks-summary");
-    const helpText = FILTERS_LOCKED_TEXT.replace("{games}", formatCount(state.analysis.total_games_analyzed));
+    const helpText = translate(FILTERS_LOCKED_TEXT, { games: formatCount(state.analysis.total_games_analyzed) });
 
-    subtitle.textContent = `${formatCount(state.analysis.total_games_analyzed)} partidas analizadas`;
+    subtitle.textContent = translate(UI.texts.gamesAnalyzed, { games: formatCount(state.analysis.total_games_analyzed) });
     patchesSummary.textContent = (state.analysis.selected_patches || []).length === (state.analysis.available_patches || []).length
-        ? "Todos los parches"
-        : `${(state.analysis.selected_patches || []).length} parches`;
+        ? UI.texts.allPatches
+        : translate(UI.texts.patchesCount, { count: (state.analysis.selected_patches || []).length });
     ranksSummary.textContent = (state.analysis.selected_ranks || []).length === (state.analysis.available_ranks || []).length
-        ? "Todos los rangos"
-        : `${(state.analysis.selected_ranks || []).length} rangos`;
+        ? UI.texts.allRanks
+        : translate(UI.texts.ranksCount, { count: (state.analysis.selected_ranks || []).length });
 
     document.getElementById("analysis-patches-help").dataset.helpText = helpText;
     document.getElementById("analysis-ranks-help").dataset.helpText = helpText;
@@ -264,7 +344,7 @@ function renderAnalysisTable() {
     document.getElementById("page-next-10").disabled = state.currentPage >= totalPages;
 
     if (!pageRows.length) {
-        body.innerHTML = `<tr><td colspan="7" class="empty-state">No hay campeones para mostrar con estos filtros.</td></tr>`;
+        body.innerHTML = `<tr><td colspan="7" class="empty-state">${escapeHtml(UI.texts.noChampions)}</td></tr>`;
         return;
     }
 
@@ -291,7 +371,7 @@ function renderAnalysisTable() {
                         <img
                             src="${window.gaWebChampionUtils.getChampionImgUrl(enemy.name)}"
                             alt="${escapeHtml(enemy.name)}"
-                            title="${escapeHtml(`${enemy.name} ${getRoleLabel(enemy.role)} | delta ${Number(enemy.delta).toFixed(1)} | ${enemy.matches} games`)}"
+                            title="${escapeHtml(`${enemy.name} ${getRoleLabel(enemy.role)} | ${UI.texts.deltaLabel.toLowerCase()} ${Number(enemy.delta).toFixed(1)} | ${enemy.matches} ${UI.texts.gamesLabel.toLowerCase()}`)}"
                         >
                     `).join("") || `<span class="neutral">-</span>`}
                 </div>
@@ -324,7 +404,7 @@ async function loadChampionFile(championId) {
 function setView(viewName) {
     document.getElementById("analysis-view").classList.toggle("hidden", viewName !== "analysis");
     document.getElementById("champion-view").classList.toggle("hidden", viewName !== "champion");
-    document.getElementById("site-title").textContent = viewName === "analysis" ? "Game Analysis" : "Champion Analysis";
+    document.getElementById("site-title").textContent = viewName === "analysis" ? UI.texts.analysisTitle : UI.texts.championTitle;
 }
 
 function updateRoute() {
@@ -345,7 +425,11 @@ function renderChampionLockedMeta(filePayload) {
     const meta = document.getElementById("champion-locked-meta");
     const patches = Array.isArray(filePayload.selected_patches) ? filePayload.selected_patches.join(", ") : "";
     const ranks = Array.isArray(filePayload.selected_ranks) ? filePayload.selected_ranks.join(", ") : "";
-    meta.textContent = `Parches: ${patches} | Rangos: ${ranks} | ${formatCount(filePayload.total_games_analyzed || 0)} partidas analizadas`;
+    meta.textContent = translate(UI.texts.championMeta, {
+        patches,
+        ranks,
+        games: formatCount(filePayload.total_games_analyzed || 0)
+    });
 }
 
 function renderChampionSummary(rolePayload) {
@@ -378,7 +462,10 @@ function renderChampionRoles(filePayload) {
 
 function renderChampionExplainer(filePayload, rolePayload) {
     const roleName = getRoleLabel(rolePayload.selected_role || state.currentChampionRole);
-    const text = `El delta de abajo mide como cambia el rendimiento de ${filePayload.champion_name} cuando juega en ${roleName} y aparece junto o enfrente de otro campeon en un rol concreto. En Sinergias, un delta positivo significa que ${filePayload.champion_name} suele rendir mejor junto al campeon indicado. En Counters, un delta positivo significa que ${filePayload.champion_name} suele rendir mejor versus el campeon indicado.`;
+    const text = translate(UI.texts.explainer, {
+        champion: filePayload.champion_name,
+        role: roleName
+    });
     document.getElementById("champion-explainer-text").textContent = text;
 }
 
@@ -391,22 +478,22 @@ function renderMatchups(rolePayload) {
     document.getElementById("toggle-counters").classList.toggle("active", state.matchupMode === "counters");
 
     if (!rows.length) {
-        container.innerHTML = `<div class="empty-state">No hay suficientes datos para esta seccion.</div>`;
+        container.innerHTML = `<div class="empty-state">${escapeHtml(UI.texts.noData)}</div>`;
         return;
     }
 
     container.innerHTML = rows.map((row) => `
         <div class="matchup-row">
-            <div class="matchup-row-label">${escapeHtml(getRoleLabel(row.role_key))} \u00b7 \u03941 \u00b7 \u0394 \u00b7 Games</div>
+            <div class="matchup-row-label">${escapeHtml(getRoleLabel(row.role_key))} \u00b7 ${escapeHtml(UI.texts.deltaOneLabel)} \u00b7 ${escapeHtml(UI.texts.deltaLabel)} \u00b7 ${escapeHtml(UI.texts.gamesLabel)}</div>
             <div class="matchup-row-track scrollbar-skin">
                 <div class="matchup-row-track-inner">
                     ${(row.entries || []).map((entry) => `
                         <div class="matchup-entry">
                             <img src="${window.gaWebChampionUtils.getChampionImgUrl(entry.name)}" alt="${escapeHtml(entry.name)}">
                             <div class="entry-name">${escapeHtml(entry.name)}</div>
-                            <div class="metric-line ${getDeltaClass(entry.delta_1)}"><span class="metric-label">\u03941</span><strong>${formatDelta(entry.delta_1)}</strong></div>
-                            <div class="metric-line ${getDeltaClass(entry.delta)}"><span class="metric-label">\u0394</span><strong>${formatDelta(entry.delta)}</strong></div>
-                            <div class="metric-line neutral"><span class="metric-label">Games</span><strong>${formatCount(entry.matches)}</strong></div>
+                            <div class="metric-line ${getDeltaClass(entry.delta_1)}"><span class="metric-label">${escapeHtml(UI.texts.deltaOneLabel)}</span><strong>${formatDelta(entry.delta_1)}</strong></div>
+                            <div class="metric-line ${getDeltaClass(entry.delta)}"><span class="metric-label">${escapeHtml(UI.texts.deltaLabel)}</span><strong>${formatDelta(entry.delta)}</strong></div>
+                            <div class="metric-line neutral"><span class="metric-label">${escapeHtml(UI.texts.gamesLabel)}</span><strong>${formatCount(entry.matches)}</strong></div>
                         </div>
                     `).join("")}
                 </div>
@@ -419,7 +506,7 @@ function renderVerticalCombos(rootId, combos) {
     const root = document.getElementById(rootId);
     const safeCombos = Array.isArray(combos) ? combos : [];
     if (!safeCombos.length) {
-        root.innerHTML = `<div class="empty-state">Sin datos suficientes.</div>`;
+        root.innerHTML = `<div class="empty-state">${escapeHtml(UI.texts.noData)}</div>`;
         return;
     }
 
@@ -430,8 +517,8 @@ function renderVerticalCombos(rootId, combos) {
                     <img class="item-icon" src="${window.gaWebChampionUtils.getItemImgUrl(item.item_id)}" alt="${escapeHtml(item.item_name)}" data-item-id="${item.item_id}">
                 `).join("")}
             </div>
-            <div class="metric-line ${getDeltaClass(combo.delta)}"><span class="metric-label">Delta</span><strong>${formatDelta(combo.delta)}</strong></div>
-            <div class="metric-line neutral"><span class="metric-label">Games</span><strong>${formatCount(combo.matches)}</strong></div>
+            <div class="metric-line ${getDeltaClass(combo.delta)}"><span class="metric-label">${escapeHtml(UI.texts.deltaLabel)}</span><strong>${formatDelta(combo.delta)}</strong></div>
+            <div class="metric-line neutral"><span class="metric-label">${escapeHtml(UI.texts.gamesLabel)}</span><strong>${formatCount(combo.matches)}</strong></div>
         </div>
     `).join("");
 }
@@ -440,7 +527,7 @@ function renderCoreBuildPaths(coreBuildPaths) {
     const root = document.getElementById("core-path-container");
     const safePaths = Array.isArray(coreBuildPaths && coreBuildPaths.paths) ? coreBuildPaths.paths : [];
     if (!safePaths.length) {
-        root.innerHTML = `<div class="empty-state">Sin datos suficientes.</div>`;
+        root.innerHTML = `<div class="empty-state">${escapeHtml(UI.texts.noData)}</div>`;
         return;
     }
 
@@ -451,8 +538,8 @@ function renderCoreBuildPaths(coreBuildPaths) {
                     <img class="item-icon" src="${window.gaWebChampionUtils.getItemImgUrl(item.item_id)}" alt="${escapeHtml(item.item_name)}" data-item-id="${item.item_id}">
                 `).join("")}
             </div>
-            <div class="metric-line ${getDeltaClass(path.delta)}"><span class="metric-label">Delta</span><strong>${formatDelta(path.delta)}</strong></div>
-            <div class="metric-line neutral"><span class="metric-label">Games</span><strong>${formatCount(path.matches)}</strong></div>
+            <div class="metric-line ${getDeltaClass(path.delta)}"><span class="metric-label">${escapeHtml(UI.texts.deltaLabel)}</span><strong>${formatDelta(path.delta)}</strong></div>
+            <div class="metric-line neutral"><span class="metric-label">${escapeHtml(UI.texts.gamesLabel)}</span><strong>${formatCount(path.matches)}</strong></div>
         </div>
     `).join("")}</div>`;
 }
@@ -461,7 +548,7 @@ function renderCoreItems(coreItems) {
     const root = document.getElementById("core-items-container");
     const safeRows = Array.isArray(coreItems && coreItems.rows) ? coreItems.rows : [];
     if (!safeRows.length) {
-        root.innerHTML = `<div class="empty-state">Sin datos suficientes.</div>`;
+        root.innerHTML = `<div class="empty-state">${escapeHtml(UI.texts.noData)}</div>`;
         return;
     }
 
@@ -474,8 +561,8 @@ function renderCoreItems(coreItems) {
                         <div class="core-item-card">
                             <img class="item-icon" src="${window.gaWebChampionUtils.getItemImgUrl(item.item_id)}" alt="${escapeHtml(item.item_name)}" data-item-id="${item.item_id}">
                             <div class="entry-name">${escapeHtml(item.item_name)}</div>
-                            <div class="metric-line ${getDeltaClass(item.delta)}"><span class="metric-label">Delta</span><strong>${formatDelta(item.delta)}</strong></div>
-                            <div class="metric-line neutral"><span class="metric-label">Games</span><strong>${formatCount(item.matches)}</strong></div>
+                            <div class="metric-line ${getDeltaClass(item.delta)}"><span class="metric-label">${escapeHtml(UI.texts.deltaLabel)}</span><strong>${formatDelta(item.delta)}</strong></div>
+                            <div class="metric-line neutral"><span class="metric-label">${escapeHtml(UI.texts.gamesLabel)}</span><strong>${formatCount(item.matches)}</strong></div>
                         </div>
                     `).join("")}
                 </div>
@@ -490,7 +577,7 @@ async function ensureRuneData() {
         return state.runeData;
     }
 
-    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${patch}/data/es_ES/runesReforged.json`);
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${patch}/data/${UI.ddragonLocale}/runesReforged.json`);
     if (!response.ok) {
         throw new Error(`No se pudo cargar runesReforged.json (${response.status})`);
     }
@@ -518,7 +605,7 @@ async function ensureItemData() {
         return state.itemData;
     }
 
-    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${patch}/data/es_ES/item.json`);
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${patch}/data/${UI.ddragonLocale}/item.json`);
     if (!response.ok) {
         throw new Error(`No se pudo cargar item.json (${response.status})`);
     }
@@ -554,38 +641,38 @@ async function renderRunes(rolePayload) {
     document.getElementById("toggle-runes-delta").classList.toggle("active", state.runeMode === "highest_delta");
 
     if (!(runePayload && runePayload.has_data)) {
-        root.innerHTML = `<div class="empty-state">Sin datos suficientes.</div>`;
+        root.innerHTML = `<div class="empty-state">${escapeHtml(UI.texts.noData)}</div>`;
         return;
     }
 
     const runeData = await ensureRuneData();
     const selected = state.runeMode === "popular" ? runePayload.popular : runePayload.highest_delta;
     if (!selected) {
-        root.innerHTML = `<div class="empty-state">Sin datos suficientes.</div>`;
+        root.innerHTML = `<div class="empty-state">${escapeHtml(UI.texts.noData)}</div>`;
         return;
     }
 
     const primaryStyle = runeData.styles.get(Number(selected.primary_style));
     const secondaryStyle = runeData.styles.get(Number(selected.sub_style));
     root.innerHTML = `
-        <div class="metric-line ${getDeltaClass(selected.delta)}"><span class="metric-label">Delta</span><strong>${formatDelta(selected.delta)}</strong></div>
-        <div class="metric-line neutral"><span class="metric-label">Games</span><strong>${formatCount(selected.matches)}</strong></div>
+        <div class="metric-line ${getDeltaClass(selected.delta)}"><span class="metric-label">${escapeHtml(UI.texts.deltaLabel)}</span><strong>${formatDelta(selected.delta)}</strong></div>
+        <div class="metric-line neutral"><span class="metric-label">${escapeHtml(UI.texts.gamesLabel)}</span><strong>${formatCount(selected.matches)}</strong></div>
         <div class="rune-block">
             <div class="rune-section">
-                <div class="rune-section-title">${escapeHtml(primaryStyle && primaryStyle.name ? primaryStyle.name : "Principal")}</div>
+                <div class="rune-section-title">${escapeHtml(primaryStyle && primaryStyle.name ? primaryStyle.name : (LANGUAGE === "en" ? "Primary" : "Principal"))}</div>
                 <div class="rune-row">
                     ${(selected.primary_runes || []).map((runeId) => buildRuneChip(runeData.runes.get(Number(runeId)), runeId)).join("")}
                 </div>
             </div>
             <div class="rune-section">
-                <div class="rune-section-title">${escapeHtml(secondaryStyle && secondaryStyle.name ? secondaryStyle.name : "Secundaria")}</div>
+                <div class="rune-section-title">${escapeHtml(secondaryStyle && secondaryStyle.name ? secondaryStyle.name : (LANGUAGE === "en" ? "Secondary" : "Secundaria"))}</div>
                 <div class="rune-row">
                     ${(selected.secondary_runes || []).map((runeId) => buildRuneChip(runeData.runes.get(Number(runeId)), runeId)).join("")}
                 </div>
             </div>
         </div>
         <div class="rune-section">
-            <div class="rune-section-title">Shards</div>
+            <div class="rune-section-title">${escapeHtml(UI.texts.shards)}</div>
             <div class="shards-row">
                 ${(selected.stat_shards || []).map((shardId) => `<div class="shard-pill">${escapeHtml(SHARD_LABELS[Number(shardId)] || `Shard ${shardId}`)}</div>`).join("")}
             </div>
@@ -614,7 +701,7 @@ function extractDescriptionLines(description) {
     const normalized = String(description || "")
         .replace(/<br\s*\/?>/gi, "\n")
         .replace(/<\/li>/gi, "\n")
-        .replace(/<li>/gi, "• ")
+        .replace(/<li>/gi, "- ")
         .replace(/<\/p>/gi, "\n")
         .replace(/<attention>/gi, "")
         .replace(/<\/attention>/gi, "")
@@ -649,17 +736,19 @@ function cleanItemDescription(itemData) {
         }
 
         const looksDuplicatedStat =
-            /vida/.test(lower) ||
+            /vida|health/.test(lower) ||
             /mana/.test(lower) ||
-            /armadura/.test(lower) ||
-            /resistencia m/.test(lower) ||
-            /velocidad de ataque/.test(lower) ||
-            /velocidad de movimiento/.test(lower) ||
-            /crit/.test(lower) ||
-            /aceleraci/.test(lower) ||
-            /robo de vida/.test(lower) ||
+            /armadura|armor/.test(lower) ||
+            /resistencia m|magic resist/.test(lower) ||
+            /velocidad de ataque|attack speed/.test(lower) ||
+            /velocidad de movimiento|movement speed|move speed/.test(lower) ||
+            /crit|critical strike/.test(lower) ||
+            /aceleraci|ability haste/.test(lower) ||
+            /robo de vida|life steal/.test(lower) ||
             /omnivamp/.test(lower) ||
-            /tenacidad/.test(lower) ||
+            /tenacidad|tenacity/.test(lower) ||
+            /reg\. vida|health regen/.test(lower) ||
+            /reg\. mana|mana regen/.test(lower) ||
             /\bad\b/.test(lower) ||
             /\bap\b/.test(lower);
 
@@ -710,7 +799,7 @@ async function showItemTooltip(event) {
     tooltip.innerHTML = `
         <div class="item-tooltip-head">
             <div class="item-tooltip-title">${escapeHtml(itemData.name || `Item ${itemId}`)}</div>
-            <div class="item-tooltip-gold">${formatCount(itemData.gold && itemData.gold.total ? itemData.gold.total : 0)} oro</div>
+            <div class="item-tooltip-gold">${formatCount(itemData.gold && itemData.gold.total ? itemData.gold.total : 0)} ${LANGUAGE === "en" ? "gold" : "oro"}</div>
         </div>
         ${chips.length ? `<div class="item-tooltip-stats">${chips.map((chip) => `<span class="stat-chip">${escapeHtml(chip)}</span>`).join("")}</div>` : ""}
         ${plainText ? `<div class="item-tooltip-text item-tooltip-plain">${escapeHtml(plainText)}</div>` : ""}
@@ -891,7 +980,7 @@ function bindStaticEvents() {
 
 async function init() {
     if (window.location.protocol === "file:") {
-        renderLoadError("Esta version web no se puede abrir con doble clic directo. Sirvela por http o subela a GitHub Pages.");
+        renderLoadError(UI.texts.cannotOpenDirectly);
         return;
     }
 
@@ -904,6 +993,6 @@ async function init() {
 document.addEventListener("DOMContentLoaded", () => {
     init().catch((error) => {
         console.error(error);
-        renderLoadError("No se pudo cargar la version web de Game Analysis.");
+        renderLoadError(UI.texts.cannotLoad);
     });
 });

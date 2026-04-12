@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTP | Game Analysis</title>
-    <meta name="description" content="Consulta informacion de campeones de League of Legends con el estilo de BTP: win rate, tier, counters, sinergias, items y runas para estudiar el meta off-game.">
+    <meta name="description" content="Browse League of Legends champion data with the BTP visual style: win rate, tier lists, counters, synergies, items, and runes to study the meta off-game.">
     <link rel="icon" href="../assets/icono.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/icono.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
@@ -12,23 +12,23 @@
 </head>
 <body>
     <nav class="glass-nav">
-        <a href="../index-es.html" class="nav-brand">
+        <a href="../index.html" class="nav-brand">
             <img src="../assets/icono.png" alt="BTP Logo" class="nav-logo-img">
             <span>BTP</span>
         </a>
         <div class="nav-links">
-            <a href="../index-es.html">Inicio</a>
-            <a href="../about-es.html">Privacidad</a>
-            <a href="../how-to-es.html">Gu&iacute;a</a>
-            <a href="./index.html" class="active">Campeones</a>
-            <a href="../download-es.html">Descargar</a>
-            <a href="../next-es.html">Futuro</a>
+            <a href="../index.html">Home</a>
+            <a href="../about.html">Privacy</a>
+            <a href="../how-to.html">Guide</a>
+            <a href="./index-en.html" class="active">Champions</a>
+            <a href="../download.html">Download</a>
+            <a href="../next.html">Roadmap</a>
 
             <div class="lang-toggle">
-                <a href="./index.html" class="lang-active" title="Espa&#241;ol">
+                <a href="./index.html" title="Espa&#241;ol">
                     <img src="https://flagcdn.com/es.svg" alt="ES">
                 </a>
-                <a href="./index-en.html" title="English">
+                <a href="./index-en.html" class="lang-active" title="English">
                     <img src="https://flagcdn.com/gb.svg" alt="EN">
                 </a>
             </div>
@@ -38,7 +38,7 @@
     <header class="hero analysis-hero">
         <h1 class="hero-title">GAME ANALYSIS</h1>
         <p class="analysis-intro">
-            Estudia el meta fuera de partida con la misma informacion que usa el asistente de draft de BTP. Consulta tiers, win rate, counters, sinergias, items y runas para preparar mejor tu siguiente cola.
+            Study the meta outside the match with the same information used by the BTP draft assistant. Check tiers, win rate, counters, synergies, items, and runes to prepare better before your next queue.
         </p>
     </header>
 
@@ -49,35 +49,35 @@
                 <h2 id="site-title" class="site-title">Game Analysis</h2>
             </div>
             <p class="site-header-copy">
-                Datos de high-elo para explorar campeones, detectar tendencias del parche y tomar mejores decisiones antes de entrar en champion select.
+                High-elo data to explore champions, spot patch trends, and make better decisions before champion select starts.
             </p>
         </header>
 
         <main class="site-main">
             <section id="analysis-view" class="view-section">
-                <div id="analysis-subtitle" class="analysis-subtitle">Cargando datos...</div>
+                <div id="analysis-subtitle" class="analysis-subtitle">Loading data...</div>
 
                 <div class="analysis-toolbar">
                     <div class="analysis-toolbar-main">
-                        <input id="analysis-search-input" class="search-input" type="text" placeholder="Buscar campeon...">
+                        <input id="analysis-search-input" class="search-input" type="text" placeholder="Search champion...">
                         <div id="role-filters" class="role-filters"></div>
                     </div>
 
                     <div class="locked-filter-row">
                         <div class="locked-filter-card">
                             <div class="locked-filter-head">
-                                <span>Parches</span>
+                                <span>Patches</span>
                                 <span id="analysis-patches-help" class="context-help" tabindex="0" data-help-text="">?</span>
                             </div>
-                            <div id="analysis-patches-summary" class="locked-filter-value">Todos los parches</div>
+                            <div id="analysis-patches-summary" class="locked-filter-value">All patches</div>
                         </div>
 
                         <div class="locked-filter-card">
                             <div class="locked-filter-head">
-                                <span>Rangos</span>
+                                <span>Ranks</span>
                                 <span id="analysis-ranks-help" class="context-help" tabindex="0" data-help-text="">?</span>
                             </div>
-                            <div id="analysis-ranks-summary" class="locked-filter-value">Todos los rangos</div>
+                            <div id="analysis-ranks-summary" class="locked-filter-value">All ranks</div>
                         </div>
                     </div>
                 </div>
@@ -86,33 +86,33 @@
                     <table class="analysis-table">
                         <thead>
                             <tr>
-                                <th><button type="button" class="sort-btn" data-sort-key="champion_name">Champ</button></th>
+                                <th><button type="button" class="sort-btn" data-sort-key="champion_name">Champion</button></th>
                                 <th><button type="button" class="sort-btn" data-sort-key="tier">Tier</button></th>
-                                <th><button type="button" class="sort-btn" data-sort-key="role_key">Rol</button></th>
+                                <th><button type="button" class="sort-btn" data-sort-key="role_key">Role</button></th>
                                 <th><button type="button" class="sort-btn" data-sort-key="win_rate">Win Rate</button></th>
                                 <th><button type="button" class="sort-btn" data-sort-key="pick_rate">Pick Rate</button></th>
                                 <th><button type="button" class="sort-btn" data-sort-key="ban_rate">Ban Rate</button></th>
-                                <th>D&eacute;bil Contra</th>
+                                <th>Weak Against</th>
                             </tr>
                         </thead>
                         <tbody id="analysis-table-body">
-                            <tr><td colspan="7" class="empty-state">Cargando datos...</td></tr>
+                            <tr><td colspan="7" class="empty-state">Loading data...</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div class="pagination">
                     <button id="page-prev-10" type="button" class="ghost-btn">&laquo; 10</button>
-                    <button id="page-prev" type="button" class="ghost-btn">Anterior</button>
+                    <button id="page-prev" type="button" class="ghost-btn">Previous</button>
                     <div id="page-indicator" class="page-indicator">1 / 1</div>
-                    <button id="page-next" type="button" class="ghost-btn">Siguiente</button>
+                    <button id="page-next" type="button" class="ghost-btn">Next</button>
                     <button id="page-next-10" type="button" class="ghost-btn">10 &raquo;</button>
                 </div>
             </section>
 
             <section id="champion-view" class="view-section hidden">
                 <div class="champion-topbar">
-                    <button id="champion-back" type="button" class="ghost-btn">&larr; Volver a Game Analysis</button>
+                    <button id="champion-back" type="button" class="ghost-btn">&larr; Back to Game Analysis</button>
                 </div>
 
                 <div class="champion-hero-card">
@@ -127,7 +127,7 @@
                         <div class="summary-pill"><span>WR</span><strong id="summary-win-rate">0%</strong></div>
                         <div class="summary-pill"><span>PR</span><strong id="summary-pick-rate">0%</strong></div>
                         <div class="summary-pill"><span>BR</span><strong id="summary-ban-rate">0%</strong></div>
-                        <div class="summary-pill"><span>Partidas</span><strong id="summary-games">0</strong></div>
+                        <div class="summary-pill"><span>Games</span><strong id="summary-games">0</strong></div>
                     </div>
                 </div>
 
@@ -141,9 +141,9 @@
 
                 <div class="section-card">
                     <div class="section-card-head">
-                        <h3>Sinergias y Counters</h3>
+                        <h3>Synergies and Counters</h3>
                         <div class="pill-toggle">
-                            <button id="toggle-synergies" type="button" class="pill-btn active">Sinergias</button>
+                            <button id="toggle-synergies" type="button" class="pill-btn active">Synergies</button>
                             <button id="toggle-counters" type="button" class="pill-btn">Counters</button>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
 
                 <div class="items-grid">
                     <div class="section-card">
-                        <h3>Primera compra</h3>
+                        <h3>First Buy</h3>
                         <div id="first-buy-container" class="vertical-combos"></div>
                     </div>
                     <div class="section-card">
@@ -173,10 +173,10 @@
 
                 <div class="section-card">
                     <div class="section-card-head">
-                        <h3>Runas</h3>
+                        <h3>Runes</h3>
                         <div class="pill-toggle">
-                            <button id="toggle-runes-popular" type="button" class="pill-btn active">M&aacute;s jugadas</button>
-                            <button id="toggle-runes-delta" type="button" class="pill-btn">Mayor delta</button>
+                            <button id="toggle-runes-popular" type="button" class="pill-btn active">Most played</button>
+                            <button id="toggle-runes-delta" type="button" class="pill-btn">Highest delta</button>
                         </div>
                     </div>
                     <div id="runes-container" class="runes-container"></div>
@@ -190,12 +190,12 @@
     <footer>
         <p>&copy; 2026 BTP - Best Trick Pony Project. Made with &#9889; for the Rift.</p>
         <div style="margin-top: 15px; font-size: 0.8rem;">
-            <a href="../legal-es.html" style="color: var(--accent); text-decoration: none; margin: 0 10px; opacity: 0.8; transition: 0.3s;">Aviso Legal y Cookies</a>
+            <a href="../legal.html" style="color: var(--accent); text-decoration: none; margin: 0 10px;">Legal &amp; Cookies</a>
             <span style="color: var(--text-secondary);">|</span>
-            <a href="../about-es.html" style="color: var(--accent); text-decoration: none; margin: 0 10px; opacity: 0.8; transition: 0.3s;">Pol&iacute;tica de Privacidad</a>
+            <a href="../about.html" style="color: var(--accent); text-decoration: none; margin: 0 10px;">Privacy Policy</a>
         </div>
         <p style="margin-top: 15px; font-size: 0.7rem; color: var(--text-secondary); opacity: 0.5;">
-            BTP no esta respaldado por Riot Games y no refleja los puntos de vista u opiniones de Riot Games ni de nadie oficialmente involucrado en la produccion o gestion de League of Legends.
+            BTP isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties.
         </p>
     </footer>
 
