@@ -19,22 +19,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <nav class="glass-nav">
+          <nav class="glass-nav">
         <a href="index.html" class="nav-brand">
             <img src="assets/icono.png" alt="BTP Logo" class="nav-logo-img">
             <span>BTP</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu" data-open-label="Open menu" data-close-label="Close menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-menu" id="site-menu">
+            <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active">Privacy</a>
-            <a href="how-to.html">Guide</a>
             <a href="Game-Analysis-Web/index-en.html">Champions</a>
+            <a href="how-to.html">Guide</a>
             <a href="download.html">Download</a>
+            <a href="about.html" class="active">Privacy</a>
             <a href="next.html">Roadmap</a>
-            
+            </div>
             <div class="lang-toggle">
-                <a href="index-es.html" title="Español"><img src="https://flagcdn.com/es.svg" alt="ES"></a>
-                <a href="index.html" class="lang-active" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN"></a>
+                <a href="about-es.html" title="Espa?ol"><img src="https://flagcdn.com/es.svg" alt="ES"></a>
+                <a href="about.html" class="lang-active" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN"></a>
             </div>
         </div>
     </nav>
@@ -92,5 +98,6 @@
             BTP isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties.
         </p>
     </footer>
+    <script src="nav.js"></script>
 </body>
 </html>
