@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Roadmap &amp; Future | BTP LoL Tracker</title>
-    <meta name="description" content="Discover the BTP roadmap and the latest updates, including v0.2 features and the new Expert Draft mode for League of Legends.">
+    <meta name="description" content="Discover the BTP roadmap and the latest updates, including the v0.3 Game Situation draft layer, direct client imports, and upcoming League of Legends features.">
     <meta name="keywords" content="BTP Roadmap, LoL Item Delta Analyzer, LoL Rune Recommender, BTP updates, Expert Draft">
     <meta name="robots" content="index, follow">
 
@@ -48,21 +48,21 @@
     <main class="container" style="padding: 70px 20px 90px;">
         <section style="max-width: 1000px; margin: 0 auto 70px;">
             <div style="text-align: center; margin-bottom: 40px;">
-                <p style="color: var(--accent); font-size: 0.95rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Version 0.2</p>
+                <p style="color: var(--accent); font-size: 0.95rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Version 0.3</p>
                 <h2 style="color: var(--text-primary); font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px;">Last Updates</h2>
                 <p style="color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; margin: 0 auto;">
-                    The latest build is already available with new interface themes, English support, expanded high-elo data, and a full off-game analysis layer.
+                    The latest build is now available with a major Draft Assistant upgrade built around the new GAME SITUATION section, direct client imports, draft simulation, and performance-focused improvements.
                 </p>
             </div>
 
             <div class="feature-row reverse" style="margin-bottom: 0;">
                 <div class="feature-text">
-                    <h2>Expert Draft Mode</h2>
-                    <p>The new <strong>Expert Draft</strong> mode is already available. Get more information directly on your screen to better prepare your champion select and understand your game plan before the match starts.</p>
-                    <p>Use the extra matchup context, synergy data, and draft details to make more confident decisions without leaving the app.</p>
+                    <h2>GAME SITUATION</h2>
+                    <p>The new <strong>GAME SITUATION</strong> panel adds a full layer of context to the draft. BTP now detects the primary and secondary archetypes of both comps and highlights which champions from your pool fit best with your allied draft.</p>
+                    <p>It also compares both teams through power curves and recommends the most played, highest win rate, and matchup-specific items and runes, with situational adjustments based on healing, shields, tanks, damage, CC, vision, and objectives.</p>
                 </div>
                 <div class="glowing-screenshot-container feature-image">
-                    <img src="assets/draft-expert.jpg" alt="BTP Expert Draft mode">
+                    <img src="assets/draft-expert.jpg" alt="BTP Game Situation panel">
                 </div>
             </div>
 
@@ -71,19 +71,27 @@
                 <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 16px;">
                     <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--text-primary);">
                         <span style="color: var(--accent); font-weight: 900;">+</span>
-                        <span>New themes and visual interface styles.</span>
+                        <span>New <strong>GAME SITUATION</strong> section with comp archetype detection, synergy-focused pool picks, recommended items and runes, power curves, and situational draft recommendations.</span>
                     </li>
                     <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--text-primary);">
                         <span style="color: var(--accent); font-weight: 900;">+</span>
-                        <span>New game analysis section to check item, rune, synergy, and counter WR before the match.</span>
+                        <span>Direct import into the LoL client for items and runes from the draft, plus optional auto-import after lock-in and page reuse to keep the profile cleaner.</span>
                     </li>
                     <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--text-primary);">
                         <span style="color: var(--accent); font-weight: 900;">+</span>
-                        <span>English language support added.</span>
+                        <span>Draft simulation mode to test picks and recommendations without needing League of Legends open.</span>
                     </li>
                     <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--text-primary);">
                         <span style="color: var(--accent); font-weight: 900;">+</span>
-                        <span>More high-elo matches added, reaching 50,000 analyzed games in total.</span>
+                        <span>Visual and layout improvements in the draft flow, item and rune tooltips, and the overall style polish of the assistant.</span>
+                    </li>
+                    <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--text-primary);">
+                        <span style="color: var(--accent); font-weight: 900;">+</span>
+                        <span>Better general performance by delaying heavy Draft Assistant calculations until the champion is locked in.</span>
+                    </li>
+                    <li style="display: flex; gap: 12px; align-items: flex-start; color: var(--text-primary);">
+                        <span style="color: var(--accent); font-weight: 900;">+</span>
+                        <span>Bug fixes for hover states, carousels, window sizing, and more consistent tool opening behavior.</span>
                     </li>
                 </ul>
             </div>
