@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="assets/icono.ico" type="image/x-icon">
 
     <meta property="og:title" content="Guía de Uso de BTP">
-    <meta property="og:description" content="Configura tu API Key y domina el flujo de BTP en 3 sencillos pasos.">
+    <meta property="og:description" content="Configura tu entorno y domina el flujo de BTP en 5 sencillos pasos.">
     <meta property="og:image" content="assets/screenshot_home_btp.png">
     
     <link rel="stylesheet" href="style.css">
@@ -59,7 +59,7 @@
     <header class="hero" style="padding: 80px 10% 40px;">
         <h1 class="hero-title" style="font-size: 3.5rem;">CÓMO USAR BTP</h1>
         <p style="font-size: 1.3rem; color: var(--text-main); max-width: 800px; margin: 0 auto 30px; font-weight: 300;">
-            De cero a experto en tres pasos. BTP está diseñado para ser intuitivo y silencioso. Configúralo una vez y deja que trabaje en segundo plano mientras tú te concentras en ganar.
+            De cero a experto en cinco pasos. BTP est&aacute; dise&ntilde;ado para ser intuitivo y silencioso. Config&uacute;ralo una vez, entiende mejor tus opciones de draft y deja que trabaje en segundo plano mientras t&uacute; te concentras en ganar.
         </p>
 
         <div class="glowing-screenshot-container" style="margin-top: 40px;">
@@ -72,38 +72,63 @@
 
     <section class="features-showcase" style="padding-top: 40px;">
         
+                <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem;">Paso 1: Define tu Arsenal</h2>
+                <p>Haz clic en <strong>Constructor de Pool</strong> desde el men&uacute; principal.</p>
+                <p>Aqu&iacute; ver&aacute;s pesta&ntilde;as para cada rol (TOP, JGL, MID, ADC, SUP). Usa el buscador para encontrar a tus campeones de confort y a&ntilde;&aacute;delos a tu lista. BTP usar&aacute; esta informaci&oacute;n para darte prioridad de picks cuando est&eacute;s en el draft.</p>
+                <p style="color: var(--turquesa); font-weight: bold; margin-top: 15px;">Tip Pro: Recuerda darle a "Guardar Cambios" antes de cambiar de rol o cerrar la ventana.</p>
+            </div>
+            <div class="glowing-screenshot-container feature-image">
+                <img src="assets/pool.jpg" alt="A&ntilde;adiendo campeones a la pool">
+            </div>
+        </div>
+
         <div class="feature-row">
             <div class="feature-text">
-                <h2 style="font-size: 2rem;">Paso 1: Configura tu API Key</h2>
-                <p>Para que el módulo de Self-Coaching pueda descargar tus estadísticas reales al terminar cada partida, necesitamos conectarnos con Riot Games.</p>
-                <p>Ve a <strong>Ajustes</strong> (el engranaje arriba a la derecha) o entra en la pestaña <strong>Self-Coaching</strong> y haz clic en <strong>"Riot API"</strong>.</p>
-                <p>Introduce tu Riot ID (Ej: Faker#KR1), tu región y la <span style="color: var(--turquesa);">Development API Key</span> que puedes generar gratuitamente en el portal de desarrolladores de Riot. Haz clic en Guardar y ¡listo!</p>
-                <p class="beta-note">Solo tendrás que hacer esto una vez. Tu clave se encriptará localmente para tus futuras sesiones.</p>
+                <h2 style="font-size: 2rem;">Paso 2: Recibe recomendaciones de draft basadas en los campeones que juegas</h2>
+                <p>Una vez guardada tu pool, el Asistente de Draft empieza a darte recomendaciones basadas en los campeones que realmente juegas.</p>
+                <p>En lugar de empujarte a picks aleatorios del meta, BTP revisa tus opciones disponibles y destaca los campeones que mejor encajan en ese draft concreto y en tu zona real de confort.</p>
+                <p>As&iacute; las recomendaciones se mantienen conectadas con tus picks de confort y el asistente te ayuda a tomar mejores decisiones sin sacarte de tu identidad como jugador.</p>
             </div>
-            <div class="glowing-screenshot-container vertical feature-image">
-                <img src="assets/api.jpg" alt="Configuración de API Key en BTP">
+            <div class="glowing-screenshot-container feature-image">
+                <img src="assets/asistant-example.jpg" alt="Recomendaciones del Asistente de Draft basadas en tu champion pool">
             </div>
         </div>
 
         <div class="feature-row reverse">
             <div class="feature-text">
-                <h2 style="font-size: 2rem;">Paso 2: Define tu Arsenal</h2>
-                <p>Haz clic en <strong>Constructor de Pool</strong> desde el menú principal.</p>
-                <p>Aquí verás pestañas para cada rol (TOP, JGL, MID, ADC, SUP). Usa el buscador para encontrar a tus campeones de confort y añádelos a tu lista. BTP usará esta información para darte prioridad de picks cuando estés en el draft.</p>
-                <p style="color: var(--turquesa); font-weight: bold; margin-top: 15px;">Tip Pro: Recuerda darle a "Guardar Cambios" antes de cambiar de rol o cerrar la ventana.</p>
+                <h2 style="font-size: 2rem;">Paso 3: Recibe recomendaciones de items y runas para cada situaci&oacute;n de partida</h2>
+                <p>La herramienta no se queda solo en recomendar campeones. BTP tambi&eacute;n te propone items y runas seg&uacute;n la situaci&oacute;n espec&iacute;fica de la partida.</p>
+                <p>Puedes comparar las configuraciones m&aacute;s jugadas, las de mayor win rate y las recomendaciones sensibles al contexto seg&uacute;n el equipo enemigo, tu composici&oacute;n aliada y c&oacute;mo escalan ambos equipos.</p>
+                <p>Esto hace que la fase de draft sea mucho m&aacute;s pr&aacute;ctica: no solo eliges campe&oacute;n, tambi&eacute;n entras a la partida con un plan mucho m&aacute;s claro.</p>
             </div>
             <div class="glowing-screenshot-container feature-image">
-                <img src="assets/pool.jpg" alt="Añadiendo campeones a la pool">
+                <img src="assets/game-situation.jpg" alt="Recomendaciones de items y runas en Game Situation">
             </div>
         </div>
 
         <div class="feature-row">
             <div class="feature-text">
-                <h2 style="font-size: 2rem;">Paso 3: Juega y Evalúa</h2>
-                <p>¡Ya está todo configurado! Minimiza BTP y entra a una partida. Si tienes activada la opción en ajustes, <strong>el asistente de draft se abrirá solo</strong> al encontrar partida.</p>
-                <p>Cuando el Nexo explote, BTP detectará el final del juego y lanzará un <strong>Mini-Popup</strong> en tu pantalla. Tómate 10 segundos para puntuar tus sensaciones, visión y farmeo. BTP cruzará tus notas con las estadísticas oficiales y lo guardará en tu historial de Self-Coaching.</p>
+                <h2 style="font-size: 2rem;">Paso 4: Configura tu API Key</h2>
+                <p>Para que el m&oacute;dulo de Self-Coaching pueda descargar tus estad&iacute;sticas reales al terminar cada partida, necesitamos conectarnos con Riot Games.</p>
+                <p>Ve a <strong>Ajustes</strong> (el engranaje arriba a la derecha) o entra en la pesta&ntilde;a <strong>Self-Coaching</strong> y haz clic en <strong>"Riot API"</strong>.</p>
+                <p>Introduce tu Riot ID (Ej: Faker#KR1), tu regi&oacute;n y la <span style="color: var(--turquesa);">Development API Key</span> que puedes generar gratuitamente en el portal de desarrolladores de Riot. Haz clic en Guardar y &iexcl;listo!</p>
+                <p class="beta-note">Solo tendr&aacute;s que hacer esto una vez. Tu clave se encriptar&aacute; localmente para tus futuras sesiones.</p>
+            </div>
+            <div class="glowing-screenshot-container vertical feature-image">
+                <img src="assets/api.jpg" alt="Configuraci&oacute;n de API Key en BTP">
             </div>
         </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h2 style="font-size: 2rem;">Paso 5: Juega y Eval&uacute;a</h2>
+                <p>&iexcl;Ya est&aacute; todo configurado! Minimiza BTP y entra a una partida. Si tienes activada la opci&oacute;n en ajustes, <strong>el asistente de draft se abrir&aacute; solo</strong> al encontrar partida.</p>
+                <p>Cuando el Nexo explote, BTP detectar&aacute; el final del juego y lanzar&aacute; un <strong>Mini-Popup</strong> en tu pantalla. T&oacute;mate 10 segundos para puntuar tus sensaciones, visi&oacute;n y farmeo. BTP cruzar&aacute; tus notas con las estad&iacute;sticas oficiales y lo guardar&aacute; en tu historial de Self-Coaching.</p>
+            </div>
+        </div>
+
         <div style="text-align: center; margin: 100px auto 30px; max-width: 800px; padding-top: 40px; border-top: 1px solid rgba(var(--accent-rgb), 0.15);">
             <h2 style="font-size: 2.5rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 15px var(--accent-glow); margin-bottom: 20px;">Análisis Estadístico Avanzado</h2>
             <p style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 15px;">Para ofrecer recomendaciones precisas en la fase de selección, BTP no se basa en el porcentaje de victorias bruto. Utilizamos un <strong>sistema de Deltas</strong> que aísla la verdadera ventaja estructural de cada enfrentamiento y destroza los mitos del Winrate.</p>
@@ -232,3 +257,4 @@
     <script src="nav.js"></script>
 </body>
 </html>
+
