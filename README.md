@@ -25,32 +25,14 @@ BTP is a lightweight, non-intrusive desktop assistant designed for players who w
   <p><em>Main Interface: Clean, fast, and focused on your goals.</em></p>
 </div>
 
----
-
-## 🛠️ Tech Stack (The Website)
-
-This repository contains the landing page for BTP, built with:
-* **Vanilla HTML5/CSS3**: Custom "Glassmorphism" UI with an Electric Turquoise theme.
-* **SEO Optimized**: Structured metadata for better indexing and professional social sharing.
-* **Zero Cookies**: 100% privacy-compliant web navigation.
-
----
-
 ## ⚖️ Legal & Compliance
 
 **BTP - Best Trick Pony** is built with integrity in mind.
 * **Riot Games Compliance:** We do not read game memory, inject DLLs, or modify game files. We strictly use the official Riot API and LCU.
-* **Development Phase:** Currently using *Development API Keys*. A *Production API Key* request is in progress to automate the user experience.
+* **Development Phase:** Currently using *Development API Key*. A *Production API Key* request is in progress to automate the user experience.
 
 > **Disclaimer:** BTP isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
 
----
-
-## 🗺️ Roadmap
-
-- [ ] **Rune & Item Recommender:** Math-based suggestions for specific matchups.
-- [ ] **Item Delta Analyzer:** Statistically evaluate the impact of your power spikes.
-- [ ] **Production API Integration:** Automated "Plug & Play" experience.
 
 ---
 
