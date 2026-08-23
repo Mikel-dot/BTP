@@ -1,3 +1,7 @@
+# ⚠️ Development Temporarily Paused
+
+BTP development is currently on pause while we await Riot Games' decision regarding an official production API key. If we are granted the official key, we will resume development at full speed; until then, the project will remain on hold. Fingers crossed!
+
 # ⚡ BTP - Best Trick Pony 
 > **The Math-Based Draft Assistant & Self-Coaching Tool for League of Legends.**
 
